@@ -35,6 +35,7 @@ var optimizeCb = function(func, context, argCount) {
 };
 ```
 
+<!-- more -->
 它是这样处理回调的，当回调函数指定上下文环境时，根据 `argCount` 来分情况使用 `call`，不同情况的
 区别只是 `call` 除了上下文环境之外的函数参数的个数不同。
 
