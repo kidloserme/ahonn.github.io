@@ -48,8 +48,8 @@ tags:
 
 **2016 To Do List**
 - 完成 Github 上的那个编程马拉松，并且有质量的 commit
-- 读完 《JavaScript 高级程序设计》&& 《 Python 核心编程》
-- 完成百度前端技术学院的春季班
+- ~~读完 《JavaScript 高级程序设计》~~（马马虎虎的看了一遍）
+- ~~完成百度前端技术学院的春季班~~（算是完成了一半吧）
 - 学习 React, React Native 等
 - more...
 

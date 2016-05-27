@@ -32,7 +32,7 @@ thread 模块是以低级、原始的方式来处理和控制线程，提供了�
 - `thread.allocate_lock()`
   创建 thread.LockType 锁类型，即为线程锁
 
-#### thread.LockType
+### thread.LockType
 
 - `Lock.acquire([ waitflag ])`
   获取锁，返回一个布尔值，成功返回 True，否则返回 False。
@@ -69,7 +69,7 @@ threading 模块是对 thread 模块的二次封装，提供更方便的 API 使
 - `threading.Lock()`
   返回一个原始锁对象
 
-#### threading.Thread
+### threading.Thread
 有两种方式来创建 threading.Thread 对象。一种方式是继承 Thread 类，重写父类的 run 方法，另一种方式是通过 threading.Thread() 函数创建。
 
 - `Thread.start()`
@@ -84,7 +84,7 @@ threading 模块是对 thread 模块的二次封装，提供更方便的 API 使
 - `Thread.isAlive()`
   返回线程是否存活。返回 True 在线程开始运行直到终止。
 
-#### threading.Lock
+### threading.Lock
 - `Lock.acquire([blocking])`
   获取锁。`blocking` 默认为 true，阻塞直到锁被释放。当 `blocking` 为 False 时，则不阻塞。
 
