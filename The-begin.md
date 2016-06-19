@@ -9,7 +9,7 @@ tags:
 
 这两天迎来了修改的 Hexo 主题 even 真正意义上的第一个用户 [Leyar](https://www.ileyar.com) ，第一次可以看到博客主题别人用上的效果。
 
-![](/img/ileyar.png)
+![](http://7xqvel.com1.z0.glb.clouddn.com/ileyar.png)
 
 说实话，欣喜若狂。我觉得这个应该在我整个人生中都算是很重要的，这是对我的肯定。
 虽然主题还有很多问题存在，但我会慢慢去完善它。期待越来越多的用户~
