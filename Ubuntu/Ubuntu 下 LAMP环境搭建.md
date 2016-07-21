@@ -1,5 +1,5 @@
-title:      "Ubuntu 下 LAMP环境搭建"
-date:       2015-08-24 12:00:00
+title: Ubuntu 下 LAMP环境搭建
+date: 2015-08-24 12:00:00
 tags:
     - Ubuntu
 ---

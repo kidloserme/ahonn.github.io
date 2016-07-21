@@ -1,4 +1,4 @@
-title: CodeIgniter 学习笔记三：URL 路由
+title: CodeIgniter URL 路由
 date: 2015-12-19 00:00:00
 tags:
 	- CodeIgniter

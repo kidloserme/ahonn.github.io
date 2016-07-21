@@ -1,4 +1,4 @@
-title: 'Python 多线程初步了解'
+title: Python 多线程初步了解
 date: 2016-02-20 20:56:39
 tags:
     - Python

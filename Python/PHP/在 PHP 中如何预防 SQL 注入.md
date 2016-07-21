@@ -1,4 +1,4 @@
-title: Stack Overflow：在 PHP 中如何预防 SQL 注入
+title: 在 PHP 中如何预防 SQL 注入
 date: 2015-12-21 13:22:28
 tags:
 	- StackOverflow

@@ -1,5 +1,5 @@
-title:      "PHP验证码识别：简单验证码识别"
-date:       2015-10-29 22:41:00
+title: PHP 简单验证码识别
+date: 2015-10-29 22:41:00
 tags:
     - PHP
     - Captcha

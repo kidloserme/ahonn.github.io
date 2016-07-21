@@ -15,7 +15,7 @@ tags:
 
 **被拖拽的元素必须是相对父元素定位，或者是绝对定位**
 
-[JavaScript 简单拖拽 Demo](../../../../demo/javascript-drag-and-drop/)
+[JavaScript 简单拖拽 Demo](./demo/javascript-drag-and-drop/)
 <!-- more -->
 
 ## 实现

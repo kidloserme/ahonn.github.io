@@ -1,5 +1,5 @@
-title:      "phpmyadmin 缺少 mcrypt 扩展"
-date:       2015-11-22 12:00:00
+title: phpmyadmin 缺少 mcrypt 扩展
+date: 2015-11-22 12:00:00
 tags:
     - Ubuntu
 ---

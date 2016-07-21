@@ -1,5 +1,5 @@
-title:      "Ubuntu: sudoers is world writable"
-date:       2015-08-30 12:00:00
+title: sudoers is world writable
+date: 2015-08-30 12:00:00
 tags:
     - Ubuntu
 ---

@@ -1,4 +1,4 @@
-title: CodeIgniter 学习笔记二：Hello World 与 MVC
+title: CodeIgniter 简单示例与 MVC
 date: 2015-12-13 22:50:06
 tags:
 	- CodeIgniter

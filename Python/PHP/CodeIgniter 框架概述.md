@@ -1,4 +1,4 @@
-title: CodeIgniter 学习笔记一：框架概述
+title: CodeIgniter 框架概述
 date: 2015-12-11 20:29:29
 tags:
 	- CodeIgniter

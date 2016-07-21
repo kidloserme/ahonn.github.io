@@ -1,15 +1,16 @@
 ---
-title: underscore 源码之 optimizeCb
+title: 从 optimizeCb 说起
 date: 2016-05-03 10:24:20
 tags:
   - Underscore
   - JavaScript
 ---
 
-## 内部函数：optimizeCb
+## optimizeCb
 在 `underscore` 中的内部函数 `optimizeCb`，顾名思义就是 optimize callback，即优化回调函数。
 
 optimizeCb:
+
 ```js
 // Internal function that returns an efficient (for current engines) version
 // of the passed-in callback, to be repeatedly applied in other Underscore
