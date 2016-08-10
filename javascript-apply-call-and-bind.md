@@ -1,5 +1,5 @@
 ---
-title: JavaScript 之 apply、call 和 bind
+title: JavaScript apply, call 与 bind
 date: 2016-03-20 23:02:08
 tags:
   - JavaScript

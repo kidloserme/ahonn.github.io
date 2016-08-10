@@ -3,7 +3,6 @@ title: Vue 中使用 highlight.js
 date: 2016-07-13 12:08:30
 tags:
   - Vue
-  - highlight.js
 ---
 
 今天遇到一个问题：在使用 vue 的练手项目中，渲染的 HTML 里 `<code>` 标签中的代码没有代码高亮。

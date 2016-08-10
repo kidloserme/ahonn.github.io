@@ -3,6 +3,7 @@ title: 使用 JavaScript 实现简单的拖拽
 date: 2016-05-14 11:09:05
 tags:
   - JavaScript
+  - 面试
 ---
 
 ## 步骤
@@ -15,39 +16,10 @@ tags:
 
 **被拖拽的元素必须是相对父元素定位，或者是绝对定位**
 
-[JavaScript 简单拖拽 Demo](./demo/javascript-drag-and-drop/)
 <!-- more -->
+{% jsfiddle Lr73mn89 result,html,css,js %}
 
 ## 实现
-
-### 页面结构及样式
-HTML + CSS:
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title> Drag and Drop </title>
-    <style>
-  	* {
-  	  padding: 0;
-      margin: 0;
-    }
-  	.box {
-  	  width: 100px;
-      height: 100px;
-      position: absolute;
-      background: red;
-      cursor: move;
-    }
-  	</style>
-  </head>
-  <body>
-    <div id="box" class="box"></div>
-    <script src="./main.js"></script>
-  </body>
-</html>
-```
 
 ### 绑定事件
 

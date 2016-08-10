@@ -1,5 +1,5 @@
 ---
-title: JavaScript 之事件流
+title: JavaScript 事件流
 date: 2016-04-16 11:29:49
 tags:
   - JavaScript

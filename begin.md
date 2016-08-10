@@ -2,12 +2,12 @@
 title: 开始
 date: 2016-04-01 21:38:31
 tags:
-  - Life
+  - 生活
 ---
 
 ## 欣喜
 
-这两天迎来了修改的 Hexo 主题 even 真正意义上的第一个用户 [Leyar](https://www.ileyar.com) ，第一次可以看到博客主题别人用上的效果。
+这两天迎来了 Hexo 博客主题 even 真正意义上的第一个用户 [Leyar](https://www.ileyar.com) ，第一次可以看到博客主题别人用上的效果。
 
 ![](http://7xqvel.com1.z0.glb.clouddn.com/ileyar.png)
 
