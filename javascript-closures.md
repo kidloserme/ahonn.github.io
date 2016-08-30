@@ -1,5 +1,5 @@
 ---
-title: JavaScript 闭包
+title: 作用域与闭包
 date: 2016-04-04 22:43:59
 tags:
   - JavaScript

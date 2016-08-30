@@ -1,3 +1,4 @@
+---
 title: Python curses 模块
 date: 2016-01-23 20:40:20
 tags:

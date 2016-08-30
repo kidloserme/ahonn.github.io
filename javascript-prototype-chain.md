@@ -1,5 +1,5 @@
 ---
-title: JavaScript 原型链
+title: 奇怪的原型链
 date: 2016-03-29 23:22:03
 tags:
   - JavaScript

@@ -1,5 +1,5 @@
 ---
-title: JavaScript apply, call 与 bind
+title: apply, call 与 bind 的区别
 date: 2016-03-20 23:02:08
 tags:
   - JavaScript
