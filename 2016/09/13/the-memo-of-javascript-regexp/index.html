@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Ahonn"><meta name="description" content="JavaScript创建正则表达式有两种方式：使用正则表达式字面量：varre=/abc/;调用RegExp对象的构造函数：varre=newRegExp(&amp;quot;abc&amp;quot;);什么时候使用构造函数？当正则表达式的模式会变发生改变，或者需"><meta name="keywords" content="JavaScript,RegExp"><title>正则表达式备忘录 · Ahonn</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://yoursite.com/2016/09/13/the-memo-of-javascript-regexp/"><link rel="alternate" href="/atom.xml" title="Ahonn"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b54ec1817ee20d83af77a0859c4dda5d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74273646-1', 'auto');
+ga('send', 'pageview');</script></head><body><div id="main"><header><a href="/." class="logo">Ahonn</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">Home</a></li><li class="nav-link"><a href="/archives/" target="_self">Archives</a></li><li class="nav-link"><a href="/tags/" target="_self">Tags</a></li><li class="nav-link"><a href="/about/" target="_self">About</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">正则表达式备忘录</h1><span class="post-time">Sep 13, 2016</span><div id="sidebar" class="post-sidebar"><h3 class="heading">Contents</h3><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么时候使用构造函数？"><span class="toc-text">什么时候使用构造函数？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匹配字符表"><span class="toc-text">匹配字符表</span></a></li></ol></div><div class="post-content"><p>JavaScript 创建正则表达式有两种方式：</p>
+<ul>
+<li>使用正则表达式字面量：<code>var re = /abc/;</code></li>
+<li>调用 RegExp 对象的构造函数：<code>var re = new RegExp(&quot;abc&quot;);</code></li>
+</ul>
+<h2 id="什么时候使用构造函数？"><a href="#什么时候使用构造函数？" class="headerlink" title="什么时候使用构造函数？"></a>什么时候使用构造函数？</h2><p>当正则表达式的模式会变发生改变，或者需要从其他地方得到时（例如用户输入），适合使用构造函数的方式。</p>
+<a id="more"></a>
+<h2 id="匹配字符表"><a href="#匹配字符表" class="headerlink" title="匹配字符表"></a>匹配字符表</h2><ul>
+<li><code>\</code>：将其后的特殊字符转义为字面量</li>
+<li><code>^</code>：匹配输入的开始</li>
+<li><code>$</code>：匹配输入的结束</li>
+<li><code>*</code>：匹配前一个表达式0次或者多次，等价于 {0,}</li>
+<li><code>+</code>：匹配前一个表达式1次或多次，等价于 {1,}</li>
+<li><code>?</code>：匹配前一个表达式0次或者1次，等价于 {0,1}</li>
+<li><code>.</code>：匹配除了换行符（\n）之外的任何单个字符</li>
+<li><code>(x)</code>：匹配 ‘x’ 并记住匹配项</li>
+<li><code>(?:x)</code>：匹配 ‘x’ 但不记住匹配项</li>
+<li><code>x(?=y)</code>: 匹配 ‘x’ 并且 ‘x’ 后面跟着 ‘y’，也叫作正向肯定查找</li>
+<li><code>x(?!y)</code>：匹配 ‘x’ 并且 ‘x’ 后面不跟着 ‘y’，也叫作正向否定查找</li>
+<li><code>x | y</code>：匹配 ‘x’ 或者 ‘y’</li>
+<li><code>{n}</code>：匹配前一个字符 n 次</li>
+<li><code>{n, m}</code>：匹配前一个字符最少 n 次</li>
+<li><code>[xyz]</code>：匹配括号中的任意一个字符，可以使用 <code>-</code> 指定范围</li>
+<li><code>[^xyz]</code>: 匹配任何不在括号中的字符</li>
+<li><code>\b</code>：匹配一个词的边界</li>
+<li><code>\B</code>：匹配非单词边界</li>
+<li><code>\d</code>：匹配一个数字</li>
+<li><code>\D</code>：匹配一个非数字字符，等价于 [^0-9]</li>
+<li><code>\f</code>：匹配一个换页符</li>
+<li><code>\n</code>：匹配一个换行符</li>
+<li><code>\r</code>: 匹配一个回车符</li>
+<li><code>\s</code>：匹配一个空白字符</li>
+<li><code>\S</code>：匹配一个非空白字符</li>
+<li><code>\t</code>：匹配一个水平制表符</li>
+<li><code>\v</code>: 匹配一个垂直制表符</li>
+<li><code>\w</code>：匹配一个单字字符，等价于 [A-Za-z0-9_]</li>
+<li><code>\W</code>：匹配一个非单字字符，等价于 [^A-Za-z0-9_]</li>
+</ul>
+</div></article><div class="tags"><a href="/tags/JavaScript/">JavaScript</a><a href="/tags/RegExp/">RegExp</a></div><div class="paginator"><a href="/2016/08/31/javascript-best-practices/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://yoursite.com/2016/09/13/the-memo-of-javascript-regexp/';
+    this.page.identifier = '2016/09/13/the-memo-of-javascript-regexp/';
+    this.page.title = '正则表达式备忘录';
+};
+(function() {
+var d = document, s = d.createElement('script');
+
+s.src = '//ahonn.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script></section><footer><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2016<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">Ahonn</span></p></div><label id="back2top"><i class="iconfont icon-up"></i></label></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>

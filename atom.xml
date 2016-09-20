@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ahonn</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-09-20T16:37:16.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Ahonn</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正则表达式备忘录</title>
+    <link href="http://yoursite.com/2016/09/13/the-memo-of-javascript-regexp/"/>
+    <id>http://yoursite.com/2016/09/13/the-memo-of-javascript-regexp/</id>
+    <published>2016-09-12T16:39:22.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>JavaScript 创建正则表达式有两种方式：</p>
+<ul>
+<li>使用正则表达式字面量：<code>var re = /abc/;</code></li>
+<li>调用 RegExp 对象的构造函数：<code>var re = new RegExp(&quot;abc&quot;);</code></li>
+</ul>
+<h2 id="什么时候使用构造函数？"><a href="#什么时候使用构造函数？" class="headerlink" title="什么时候使用构造函数？"></a>什么时候使用构造函数？</h2><p>当正则表达式的模式会变发生改变，或者需要从其他地方得到时（例如用户输入），适合使用构造函数的方式。</p>
+<a id="more"></a>
+<h2 id="匹配字符表"><a href="#匹配字符表" class="headerlink" title="匹配字符表"></a>匹配字符表</h2><ul>
+<li><code>\</code>：将其后的特殊字符转义为字面量</li>
+<li><code>^</code>：匹配输入的开始</li>
+<li><code>$</code>：匹配输入的结束</li>
+<li><code>*</code>：匹配前一个表达式0次或者多次，等价于 {0,}</li>
+<li><code>+</code>：匹配前一个表达式1次或多次，等价于 {1,}</li>
+<li><code>?</code>：匹配前一个表达式0次或者1次，等价于 {0,1}</li>
+<li><code>.</code>：匹配除了换行符（\n）之外的任何单个字符</li>
+<li><code>(x)</code>：匹配 ‘x’ 并记住匹配项</li>
+<li><code>(?:x)</code>：匹配 ‘x’ 但不记住匹配项</li>
+<li><code>x(?=y)</code>: 匹配 ‘x’ 并且 ‘x’ 后面跟着 ‘y’，也叫作正向肯定查找</li>
+<li><code>x(?!y)</code>：匹配 ‘x’ 并且 ‘x’ 后面不跟着 ‘y’，也叫作正向否定查找</li>
+<li><code>x | y</code>：匹配 ‘x’ 或者 ‘y’</li>
+<li><code>{n}</code>：匹配前一个字符 n 次</li>
+<li><code>{n, m}</code>：匹配前一个字符最少 n 次</li>
+<li><code>[xyz]</code>：匹配括号中的任意一个字符，可以使用 <code>-</code> 指定范围</li>
+<li><code>[^xyz]</code>: 匹配任何不在括号中的字符</li>
+<li><code>\b</code>：匹配一个词的边界</li>
+<li><code>\B</code>：匹配非单词边界</li>
+<li><code>\d</code>：匹配一个数字</li>
+<li><code>\D</code>：匹配一个非数字字符，等价于 [^0-9]</li>
+<li><code>\f</code>：匹配一个换页符</li>
+<li><code>\n</code>：匹配一个换行符</li>
+<li><code>\r</code>: 匹配一个回车符</li>
+<li><code>\s</code>：匹配一个空白字符</li>
+<li><code>\S</code>：匹配一个非空白字符</li>
+<li><code>\t</code>：匹配一个水平制表符</li>
+<li><code>\v</code>: 匹配一个垂直制表符</li>
+<li><code>\w</code>：匹配一个单字字符，等价于 [A-Za-z0-9_]</li>
+<li><code>\W</code>：匹配一个非单字字符，等价于 [^A-Za-z0-9_]</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JavaScript 创建正则表达式有两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用正则表达式字面量：&lt;code&gt;var re = /abc/;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;调用 RegExp 对象的构造函数：&lt;code&gt;var re = new RegExp(&amp;quot;abc&amp;quot;);&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;什么时候使用构造函数？&quot;&gt;&lt;a href=&quot;#什么时候使用构造函数？&quot; class=&quot;headerlink&quot; title=&quot;什么时候使用构造函数？&quot;&gt;&lt;/a&gt;什么时候使用构造函数？&lt;/h2&gt;&lt;p&gt;当正则表达式的模式会变发生改变，或者需要从其他地方得到时（例如用户输入），适合使用构造函数的方式。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="RegExp" scheme="http://yoursite.com/tags/RegExp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 最佳实践：提升代码质量的建议和技巧</title>
+    <link href="http://yoursite.com/2016/08/31/javascript-best-practices/"/>
+    <id>http://yoursite.com/2016/08/31/javascript-best-practices/</id>
+    <published>2016-08-31T14:57:34.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>翻译自：<a href="https://www.codementor.io/javascript/tutorial/javascript-best-practices" target="_blank" rel="external">JavaScript Best Practices: Tips &amp; Tricks to Level Up Your Code</a><br>没有严格的按照原文翻译，删减修改了部分内容。</p>
+</blockquote>
+<p>在这个教程中，会列出一些重要的 JavaScript 的最佳实践，学习这些并不会很困难。</p>
+<h2 id="避免污染全局作用域"><a href="#避免污染全局作用域" class="headerlink" title="避免污染全局作用域"></a>避免污染全局作用域</h2><p>声明变量是很有趣的，有时候你会在你不知情的情况下声明了全局变量。在现在的浏览器中，全局变量将会存储在 <code>window</code> 变量中。在全局作用域中的变量可能在不经意间被覆盖。</p>
+<a id="more"></a>
+<p>假设你现在有一个 HTML 文件，其中包括一个 <code>&lt;script&gt;</code> 标签，包含如下内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="number">42</span>;</div><div class="line"><span class="built_in">console</span>.log(foo);</div></pre></td></tr></table></figure>
+<p>显然这会在控制台中输出 42。但是，由于这些代码不是在函数中执行的，而是处于全局作用域中，因此 foo 将会被附加到 <code>window</code> 上。也就是说 <code>window.foo</code> 的值同样也是 42。</p>
+<p>这样做是危险的，因为这样会覆盖现有的全局变量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// do something</span></div><div class="line">&#125;</div><div class="line">print();</div></pre></td></tr></table></figure>
+<p>当执行 <code>window.print</code> 或者 <code>print</code> 时，因为我们重写了 <code>print</code> 函数，所以原来的打印函数不起作用了，也就不会弹出打印框了。</p>
+<p>解决办法很简单：使用立即执行函数（IIFE）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Declare an anonymous function</span></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> foo = <span class="number">42</span>;</div><div class="line">   <span class="built_in">console</span>.log(<span class="built_in">window</span>.foo);</div><div class="line">   <span class="comment">// → undefined</span></div><div class="line">   <span class="built_in">console</span>.log(foo);</div><div class="line">   <span class="comment">// → 42</span></div><div class="line">&#125;)();</div><div class="line"><span class="comment">//^ and call it immediately</span></div></pre></td></tr></table></figure>
+<p>或者，可以将 <code>window</code> 等全局变量作为参数传递给函数（这可能提高性能）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">global, doc</span>) </span>&#123;</div><div class="line">  global.setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">     doc.body.innerHTML = <span class="string">"Hello!"</span>;</div><div class="line">  &#125;, <span class="number">1000</span>);</div><div class="line">&#125;)(<span class="built_in">window</span>, <span class="built_in">document</span>);</div></pre></td></tr></table></figure>
+<p>所以，我们可以使用上述的两种方式，避免不知情的情况下创建全局变量。</p>
+<h2 id="使用-“use-strict”"><a href="#使用-“use-strict”" class="headerlink" title="使用 “use strict”"></a>使用 “use strict”</h2><p>严格使用 <code>&quot;use strict&quot;</code>，这只不过是在你的代码中添加字符串，但它的作用非常大。</p>
+<p>比如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// This is bad, since you do create a global without having anyone to tell you</span></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">   a = <span class="number">42</span>;</div><div class="line">   <span class="built_in">console</span>.log(a);</div><div class="line">   <span class="comment">// → 42</span></div><div class="line">&#125;)();</div><div class="line"><span class="built_in">console</span>.log(a);</div><div class="line"><span class="comment">// → 42</span></div></pre></td></tr></table></figure>
+<p>上述代码，如果使用 <code>&quot;use strict&quot;</code>，你将会得到一些错误信息：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">   "use strict"</span>;</div><div class="line">   a = <span class="number">42</span>;</div><div class="line">   <span class="comment">// Error: Uncaught ReferenceError: a is not defined</span></div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<p>你可能会很奇怪，为什么不把 <code>&quot;use strict&quot;</code> 放到函数之外？实际上你可以将它放到函数外，但是这样的话他就在全局环境中应用了。这有可能影响来自其他库的代码。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用 ==="></a>使用 ===</h2><p>如果你比较 a 和 b 时使用 <code>==</code>，在 JavaScript 中你会发现这是一种奇怪的方式。如果你有一个字符串和一个数字，像是下面这样。他们将是相等的，即返回 true：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">"42"</span> == <span class="number">42</span></div><div class="line"><span class="comment">// → true</span></div></pre></td></tr></table></figure>
+<p>这是一种不严格的比较，在进行数据验证时，最好使用 <code>===</code>。这将会严格的比较 a 与 b 是否相等：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">"42"</span> === <span class="number">42</span></div><div class="line"><span class="comment">// → false</span></div></pre></td></tr></table></figure>
+<h2 id="使用神奇的-amp-amp-和"><a href="#使用神奇的-amp-amp-和" class="headerlink" title="使用神奇的 &amp;&amp; 和 ||"></a>使用神奇的 &amp;&amp; 和 ||</h2><p>根据的你的需要，可以使用逻辑运算符使得代码更加简短。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="string">""</span> || <span class="string">"foo"</span></div><div class="line"><span class="comment">// → "foo"</span></div><div class="line"></div><div class="line"><span class="literal">undefined</span> || <span class="number">42</span></div><div class="line"><span class="comment">// → 42</span></div><div class="line"></div><div class="line"><span class="comment">// Note that if you want to handle 0 there, you need</span></div><div class="line"><span class="comment">// to check if a number was provided:</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">0</span>;</div><div class="line">a || <span class="number">42</span></div><div class="line"><span class="comment">// → 42</span></div><div class="line"></div><div class="line"><span class="comment">// This is a ternary operator—works like an inline if-else statement</span></div><div class="line"><span class="keyword">var</span> b = <span class="keyword">typeof</span> a === <span class="string">"number"</span> ? a : <span class="number">42</span>;</div><div class="line"><span class="comment">// → 0</span></div></pre></td></tr></table></figure>
+<p>可以这样简单的实现 if 的检查：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">expr &amp;&amp; doSomething();</div><div class="line"></div><div class="line"><span class="comment">// Instead of:</span></div><div class="line"><span class="keyword">if</span> (expr) &#123;</div><div class="line">   doSomething();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果你需要返回结果，你还可以这样做：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span> (<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">return</span> &#123; foo: <span class="string">"bar"</span> &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> expr = <span class="literal">true</span>;</div><div class="line"><span class="keyword">var</span> res = expr &amp;&amp; doSomething();</div><div class="line">res &amp;&amp; <span class="built_in">console</span>.log(res);</div><div class="line"><span class="comment">// → &#123; foo: "bar" &#125;</span></div></pre></td></tr></table></figure>
+<p>这里你可以不同意我的观点，但这是比较理想的情况。如果你不想要这样丑化你的代码，使得代码隐晦。这是那些 JavaScript 压缩工具会做的事情，你可以使用它们。</p>
+<p>虽然代码比较短，但是这依然是具有可读性的。</p>
+<h2 id="转换类型"><a href="#转换类型" class="headerlink" title="转换类型"></a>转换类型</h2><p>有很多种方式去进行类型转换，要怎么转换取决于你。这里有一些常用的方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// From anything to a number</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> foo = <span class="string">"42"</span>;</div><div class="line"><span class="keyword">var</span> myNumber = +foo; <span class="comment">// shortcut for Number(foo)</span></div><div class="line"><span class="comment">// → 42</span></div><div class="line"></div><div class="line"><span class="comment">// Tip: you can convert it directly into a negative number</span></div><div class="line"><span class="keyword">var</span> negativeFoo = -foo; <span class="comment">// or -Number(foo)</span></div><div class="line"><span class="comment">// → -42</span></div><div class="line"></div><div class="line"><span class="comment">// From object to array</span></div><div class="line"><span class="comment">// Tip: `arguments` is an object and in general you want to use it as array</span></div><div class="line"><span class="keyword">var</span> args = &#123; <span class="number">0</span>: <span class="string">"foo"</span>, <span class="number">1</span>: <span class="string">"bar"</span>, length: <span class="number">2</span> &#125;;</div><div class="line"><span class="built_in">Array</span>.prototype.slice.call(args)</div><div class="line"><span class="comment">// → [ 'foo', 'bar' ]</span></div><div class="line"></div><div class="line"><span class="comment">// Anything to boolean</span></div><div class="line"><span class="comment">/// Non non p is a boolean p</span></div><div class="line"><span class="keyword">var</span> t = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> f = <span class="number">0</span>;</div><div class="line">!!t</div><div class="line"><span class="comment">// → true</span></div><div class="line">!!f</div><div class="line"><span class="comment">// → false</span></div><div class="line"></div><div class="line"><span class="comment">/// And non-p is a boolean non-p</span></div><div class="line">!t</div><div class="line"><span class="comment">// → false</span></div><div class="line">!f</div><div class="line"><span class="comment">// → true</span></div><div class="line"></div><div class="line"><span class="comment">// Anything to string</span></div><div class="line"><span class="keyword">var</span> foo = <span class="number">42</span>;</div><div class="line"><span class="string">""</span> + foo <span class="comment">// shortcut for String(foo)</span></div><div class="line"><span class="comment">// → "42"</span></div><div class="line"></div><div class="line">foo = &#123; hello: <span class="string">"world"</span> &#125;;</div><div class="line"><span class="built_in">JSON</span>.stringify(foo);</div><div class="line"><span class="comment">// → '&#123; "hello":"world" &#125;'</span></div><div class="line"></div><div class="line"><span class="built_in">JSON</span>.stringify(foo, <span class="literal">null</span>, <span class="number">4</span>); <span class="comment">// beautify the things</span></div><div class="line"><span class="comment">// →</span></div><div class="line"><span class="comment">// '&#123;</span></div><div class="line"><span class="comment">//    "hello": "world"</span></div><div class="line"><span class="comment">// &#125;'</span></div><div class="line"></div><div class="line"><span class="comment">// Note you cannot JSON.stringify circular structures</span></div><div class="line"><span class="built_in">JSON</span>.stringify(<span class="built_in">window</span>);</div><div class="line"><span class="comment">// ⚠ TypeError: JSON.stringify cannot serialize cyclic structures.</span></div></pre></td></tr></table></figure>
+<h2 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h2><p>对新项目，保持项目中的所有代码的风格相同。对于现有项目，使用现有项目的代码风格，除非你真的想去改变它。</p>
+<p><strong>制定你的代码风格，并始终遵循它</strong></p>
+<p>这里还有一些推荐的现有代码风格：</p>
+<ul>
+<li><a href="https://google.github.io/styleguide/javascriptguide.xml" target="_blank" rel="external">Google JavaScript Style Guide</a></li>
+<li><a href="https://github.com/airbnb/javascript" target="_blank" rel="external">airbnb/javascript</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;翻译自：&lt;a href=&quot;https://www.codementor.io/javascript/tutorial/javascript-best-practices&quot;&gt;JavaScript Best Practices: Tips &amp;amp; Tricks to Level Up Your Code&lt;/a&gt;&lt;br&gt;没有严格的按照原文翻译，删减修改了部分内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在这个教程中，会列出一些重要的 JavaScript 的最佳实践，学习这些并不会很困难。&lt;/p&gt;
+&lt;h2 id=&quot;避免污染全局作用域&quot;&gt;&lt;a href=&quot;#避免污染全局作用域&quot; class=&quot;headerlink&quot; title=&quot;避免污染全局作用域&quot;&gt;&lt;/a&gt;避免污染全局作用域&lt;/h2&gt;&lt;p&gt;声明变量是很有趣的，有时候你会在你不知情的情况下声明了全局变量。在现在的浏览器中，全局变量将会存储在 &lt;code&gt;window&lt;/code&gt; 变量中。在全局作用域中的变量可能在不经意间被覆盖。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何减少浏览器回流</title>
+    <link href="http://yoursite.com/2016/08/02/javascript-reduce-the-browser-reflow/"/>
+    <id>http://yoursite.com/2016/08/02/javascript-reduce-the-browser-reflow/</id>
+    <published>2016-08-02T14:46:33.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是浏览器回流"><a href="#什么是浏览器回流" class="headerlink" title="什么是浏览器回流"></a>什么是浏览器回流</h2><p>浏览器在显示网页时，需要计算每一个元素应该放置的位置，这个计算过程就称为浏览器回流（browser reflow）。回流会重新计算页面的布局，在回流中会重新计算元素的尺寸与位置，并且也会触发对子元素的回流。</p>
+<p>触发浏览器回流的操作：</p>
+<ul>
+<li>在 DOM 中插入，移除或者更新元素</li>
+<li>修改页面上的内容</li>
+<li>移动 DOM 元素</li>
+<li>修改元素 CSS 样式</li>
+<li>修改元素的类名</li>
+<li>调整窗口的大小</li>
+</ul>
+<a id="more"></a>
+<p>基本上跟元素相关的操作都会触发浏览器回流。浏览器的回流需要耗时，尽量减少浏览器的回流，那么就可以提高整个网页的效率。</p>
+<h2 id="创建单一元素"><a href="#创建单一元素" class="headerlink" title="创建单一元素"></a>创建单一元素</h2><p>当我们需要创建一个新元素插入到页面中，并且设置元素的属性。我们会这样做：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addElement</span>(<span class="params">parent, elementText</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">  parent.appendChild(element);</div><div class="line">  element.innerHTML = anchorText;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样写会产生2次浏览器回流，新创建的元素在插入页面中之后又进行了属性的修改。更好的写法是把插入到页面的操作放到最后，这样给元素设置属性的操作就是在内存中进行的。这样就只有元素插入到页面时产生的一次回流。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addElement</span>(<span class="params">parent, elementText</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">  element.innerHTML = anchorText;</div><div class="line">  parent.appendChild(element);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="创建多个元素"><a href="#创建多个元素" class="headerlink" title="创建多个元素"></a>创建多个元素</h2><p>在实际的使用中，更多的情况是创建多个元素，并插入到页面中。按照创建单一元素插入到页面时的写法，我们会这样写：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addElements</span>(<span class="params">parent, elementText</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element;</div><div class="line"></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">    element = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">    element.innerHTML = anchorText;</div><div class="line">    parent.appendChild(element);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看出，这样写会产生10次回流，每一次插入元素都会产生一次。这时候我们需要用到 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment" target="_blank" rel="external">DocumentFragment</a>，DocumentFragment 有占位符的作用，可以暂时存放那些插入文档元素。</p>
+<p>当把一个 DocumentFragment 插入文档树时，插入的不是 DocumentFragment 自身，而是它的所有子孙节点。可以用 <code>Document.createDocumentFragment()</code> 方法创建新的空 DocumentFragment 节点。</p>
+<p>通过 DocumentFragment 可以让上面的操作值产生一次浏览器回流：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addElements</span>(<span class="params">parent, elementText</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element,</div><div class="line">      fragment = <span class="built_in">document</span>.createDocumentFragment();</div><div class="line"></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">    element = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">    element.innerHTML = anchorText;</div><div class="line">    fragment.appendChild(element);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  parent.appendChild(fragment);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="修改元素样式"><a href="#修改元素样式" class="headerlink" title="修改元素样式"></a>修改元素样式</h2><p>在 JavaScript 中修改元素的样式也是经常会做的操作。修改元素的多个样式时会这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStyle</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">  element.style.fontSize   = <span class="string">"14px"</span>;</div><div class="line">  element.style.fontWeight = <span class="string">"600"</span>;</div><div class="line">  element.style.color      = <span class="string">"#fff"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>实际上，每一次对元素的样式的变更都会产生一次回流。好的做法是创建一个 class 包含这些样式。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.changeStyle</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">  <span class="attribute">font-weight</span>: <span class="number">600</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStyle</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">  element.className = <span class="string">'changeStyle'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>减少浏览器回流的方式，就是将一切能够在内存完成的完成之后再应用到页面中，对元素样式的操作尽量通过添加修改 CSS 类来实现。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是浏览器回流&quot;&gt;&lt;a href=&quot;#什么是浏览器回流&quot; class=&quot;headerlink&quot; title=&quot;什么是浏览器回流&quot;&gt;&lt;/a&gt;什么是浏览器回流&lt;/h2&gt;&lt;p&gt;浏览器在显示网页时，需要计算每一个元素应该放置的位置，这个计算过程就称为浏览器回流（browser reflow）。回流会重新计算页面的布局，在回流中会重新计算元素的尺寸与位置，并且也会触发对子元素的回流。&lt;/p&gt;
+&lt;p&gt;触发浏览器回流的操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 DOM 中插入，移除或者更新元素&lt;/li&gt;
+&lt;li&gt;修改页面上的内容&lt;/li&gt;
+&lt;li&gt;移动 DOM 元素&lt;/li&gt;
+&lt;li&gt;修改元素 CSS 样式&lt;/li&gt;
+&lt;li&gt;修改元素的类名&lt;/li&gt;
+&lt;li&gt;调整窗口的大小&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数组乱序的正确姿势</title>
+    <link href="http://yoursite.com/2016/07/25/the-right-way-to-array-of-random-sequence/"/>
+    <id>http://yoursite.com/2016/07/25/the-right-way-to-array-of-random-sequence/</id>
+    <published>2016-07-25T02:53:19.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 <code>underscore</code> 中有一个函数，其作用是将数组乱序排序，实现如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Shuffle a collection, using the modern version of the</span></div><div class="line"><span class="comment">// [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).</span></div><div class="line"><span class="comment">// `shuffle` 函数。</span></div><div class="line">_.shuffle = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> set = isArrayLike(obj) ? obj : _.values(obj);</div><div class="line">  <span class="keyword">var</span> length = set.length;</div><div class="line">  <span class="keyword">var</span> shuffled = <span class="built_in">Array</span>(length);</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>, rand; index &lt; length; index++) &#123;</div><div class="line">    rand = _.random(<span class="number">0</span>, index);</div><div class="line">    <span class="keyword">if</span> (rand !== index) shuffled[index] = shuffled[rand];</div><div class="line">    shuffled[rand] = set[index];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> shuffled;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>其中使用的数组乱序的算法是 <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle" target="_blank" rel="external">Fisher–Yates shuffle</a>。这是一个 O(n) 复杂度的随机排列数组元素的经典算法。</p>
+<p>每次循环从前面的 <code>index</code> 个元素中随机选择一个元素 <code>shuffle[rand]</code>。将这个元素与第 <code>index</code> 个元素进行交换，直到 <code>index == length</code> 为止。这样对元素进行随机交换，对于每个结果所获得概率是均匀的。<code>_.shuffle</code> 方法是返回一个新的乱序数组，所以需要一个新的数组来存储。</p>
+<p>对原有数组进行乱序：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">shuffle</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> length = arr.length;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>, rand; index &lt; length; index ++) &#123;</div><div class="line">    rand = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (length - <span class="number">1</span>));</div><div class="line"></div><div class="line">    <span class="keyword">var</span> temp = arr[rand];</div><div class="line">    arr[rand] = arr[index];</div><div class="line">    arr[index] = temp;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>More</strong></p>
+<ul>
+<li><a href="https://github.com/hanzichi/underscore-analysis/issues/15" target="_blank" rel="external">JavaScript 数组乱序</a></li>
+<li><a href="https://www.h5jun.com/post/array-shuffle.html" target="_blank" rel="external">数组的完全随机排列</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 &lt;code&gt;underscore&lt;/code&gt; 中有一个函数，其作用是将数组乱序排序，实现如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Shuffle a collection, using the modern version of the&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// `shuffle` 函数。&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;_.shuffle = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;obj&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; set = isArrayLike(obj) ? obj : _.values(obj);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; length = set.length;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; shuffled = &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;(length);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; index = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, rand; index &amp;lt; length; index++) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    rand = _.random(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, index);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (rand !== index) shuffled[index] = shuffled[rand];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    shuffled[rand] = set[index];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; shuffled;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="Underscore" scheme="http://yoursite.com/tags/Underscore/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浪矢杂货店</title>
+    <link href="http://yoursite.com/2016/07/24/langshi-grocery-store/"/>
+    <id>http://yoursite.com/2016/07/24/langshi-grocery-store/</id>
+    <published>2016-07-24T11:45:35.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>解忧杂货店，零零散散的在地铁上看完了这本之前一直听到却没有去看的小说。其实几天前想写这篇读书笔记的，一直被拖延至今。</p>
+<p>爱情公寓中有一集曾小贤说了这样一句话。当面对两个选择时，抛硬币总能奏效，并不是因为它总能给出对的答案，而是在你把它抛在空中的那一秒里，你突然知道你希望它是什么。就像是那些向浪矢杂货店投递烦恼信件一样，其实真正来向浪矢爷爷咨询的人大多心里已经有了答案。只是自己没有发现，当杂货店回信中的建议并不像所期望的回答的时候，咨询者就发现自己想要的那个答案。<br><a id="more"></a></p>
+<blockquote>
+<p>我咨询多年，终于了解到一件事。通常咨询者心里已经有了答案，找人咨询的目的，只是为了确认这个答案是正确的。所以，有些咨询者在看了我的回信后，会再写信给我，可能是我的回答和他原本想的不一样。</p>
+</blockquote>
+<p>我想，面对选择的时候抛硬币大部分时候都会奏效。有时候抛起硬币，掉落下来，整一个过程脑袋一片空白，完全不知道希望它是什么。但其实那一片空白中一闪而过的那个念头就是我们想要的，只是没有发现。</p>
+<p>虽然的确能够作出选择，但是有时在作出了选择过后，我却总会想着当时如果作出另外的一个选择的话会是什么样的呢。</p>
+<p>围绕着浪矢杂货店，人与人之间错综复杂的羁绊构成了整本书的故事线，就像是蝴蝶效应一般。每个人不经意间的选择和行为，都像投入水面的石子一样，造成了持续不断的涟漪，这些涟漪不断扩大，渐渐形成了牢不可破的羁绊，过去未来终于交汇。就像是浪矢杂货店对烦恼咨询者的回信一样，或许选择了另外一种建议，故事是不是又会不一样呢？我想，即使作出了不同的选择，那个牢不可破的羁绊依然还会那样存在吧。</p>
+<p>书中有句话特别适合现在的我，<strong>“虽然走起来并不是一帆风顺，但我觉得那是因为我活着，才会感受到这些痛楚，所以克服了重重困难。”</strong>所以只要是活着总是难免会感受到痛楚，所以才要克服这些困难，这样才是活着。有些经历总是必须的，不然活着就像死了一样不是吗？</p>
+<blockquote>
+<p>如果说，来找我咨询烦恼的人是迷途的羔羊，通常他们手上都有地图，却没有看地图，或是不知道自己目前的位置。<br>但我相信你不属于任何一种情况，你画的地图是一张白纸，所以，即使想决定目的地，也不知道路在哪里。<br>地图是白纸当然很伤脑筋，任何人都会不知所措。<br>但是不妨换一个角度思考，正因为是白纸，所以可以画任何地图，一切都掌握在你自己手上。你很自由，充满了无限可能。这是很棒的事，我衷心祈祷你可以相信自己，无悔地燃烧自己。</p>
+</blockquote>
+<p>这是书中对于白纸的回信，这个回答对于所有人都算是解答吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;解忧杂货店，零零散散的在地铁上看完了这本之前一直听到却没有去看的小说。其实几天前想写这篇读书笔记的，一直被拖延至今。&lt;/p&gt;
+&lt;p&gt;爱情公寓中有一集曾小贤说了这样一句话。当面对两个选择时，抛硬币总能奏效，并不是因为它总能给出对的答案，而是在你把它抛在空中的那一秒里，你突然知道你希望它是什么。就像是那些向浪矢杂货店投递烦恼信件一样，其实真正来向浪矢爷爷咨询的人大多心里已经有了答案。只是自己没有发现，当杂货店回信中的建议并不像所期望的回答的时候，咨询者就发现自己想要的那个答案。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue 中使用 highlight.js</title>
+    <link href="http://yoursite.com/2016/07/13/getting-highlightjs-to-work-with-vue.js/"/>
+    <id>http://yoursite.com/2016/07/13/getting-highlightjs-to-work-with-vue.js/</id>
+    <published>2016-07-13T04:08:30.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天遇到一个问题：在使用 vue 的练手项目中，渲染的 HTML 里 <code>&lt;code&gt;</code> 标签中的代码没有代码高亮。</p>
+<p>遂想到用 highlight.js 来解决，按照平常那样在 HTML 文件中引入 <code>js</code> 和 <code>css</code> 文件，然后在<code>&lt;header&gt;</code> 中加上一句 <code>&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;</code>。但是却没有效果。</p>
+<p>在 Vue.js 的论坛上找到了解决方案 <a href="https://forum.vuejs.org/topic/3514/getting-highlightjs-to-work-with-vue-router" target="_blank" rel="external">Getting highlightjs to work with vue-router</a>。highlight.js 没有效果是因为使用了 <code>vue-route</code>，在 route 改变时，页面将会重新渲染并且会移除事件，这里就把 highlight 的事件给移除了。<br><a id="more"></a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>所以得到的解决方案是，使用 Vue.js 的自定义指令，定义一个叫做 <code>v-highlight</code> 的指令来使得 <code>&lt;pre&gt;&lt;code&gt; .. &lt;/code&gt;&lt;/pre&gt;</code> 中的代码高亮。</p>
+<p>定义自定义指令：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Hljs <span class="keyword">from</span> <span class="string">'highlight.js'</span></div><div class="line"></div><div class="line">Vue.directive(<span class="string">'highlightjs'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> blocks = <span class="keyword">this</span>.el.querySelectorAll(<span class="string">'pre code'</span>);</div><div class="line">  <span class="built_in">Array</span>.prototype.forEach.call(blocks, Hljs.highlightBlock);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>这里 import 了 highlight.js，所以需要 <code>npm install highlight.js</code>。导入之后使用 <code>Vue.directive()</code> 定义 <code>v-highlightjs</code> 指令，获取使用该指令的 document 中的 <code>pre  code</code> 部分，并使用 highlight.js 的 <code>highlightBlock</code> 使其高亮。</p>
+<h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><p>之后在需要高亮的地方，使用 <code>v-highlightjs</code> 指令即可用使得其中的 <code>&lt;pre&gt;&lt;code&gt; .. &lt;/code&gt;&lt;/pre&gt;</code> 部分高亮。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-html</span>=<span class="string">"your_content"</span> <span class="attr">v-highlightjs</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天遇到一个问题：在使用 vue 的练手项目中，渲染的 HTML 里 &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; 标签中的代码没有代码高亮。&lt;/p&gt;
+&lt;p&gt;遂想到用 highlight.js 来解决，按照平常那样在 HTML 文件中引入 &lt;code&gt;js&lt;/code&gt; 和 &lt;code&gt;css&lt;/code&gt; 文件，然后在&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt; 中加上一句 &lt;code&gt;&amp;lt;script&amp;gt;hljs.initHighlightingOnLoad();&amp;lt;/script&amp;gt;&lt;/code&gt;。但是却没有效果。&lt;/p&gt;
+&lt;p&gt;在 Vue.js 的论坛上找到了解决方案 &lt;a href=&quot;https://forum.vuejs.org/topic/3514/getting-highlightjs-to-work-with-vue-router&quot;&gt;Getting highlightjs to work with vue-router&lt;/a&gt;。highlight.js 没有效果是因为使用了 &lt;code&gt;vue-route&lt;/code&gt;，在 route 改变时，页面将会重新渲染并且会移除事件，这里就把 highlight 的事件给移除了。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS 实现垂直居中</title>
+    <link href="http://yoursite.com/2016/06/29/vertical-center-for-css/"/>
+    <id>http://yoursite.com/2016/06/29/vertical-center-for-css/</id>
+    <published>2016-06-29T15:14:02.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们有这样一个结构的 HTML：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"children"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如果我们要实现 <code>.children</code> 在 <code>.parent</code> 中垂直居中。</p>
+<p>通常第一印象会想起给父元素设置绝对定位，给子元素设置相对定位。这样子元素就相对于父元素定位，再通过 <code>top</code> 与 <code>left</code> 各偏移 50% 父元素宽度，使用 <code>margin-*</code> 来修正子元素的位置。<br><a id="more"></a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.chilren</span> &#123;</div><div class="line">  <span class="attribute">width</span>: $width;</div><div class="line">  <span class="attribute">height</span>: $height;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">margin-top</span>: -$height/<span class="number">2</span>;</div><div class="line">  <span class="attribute">margin-left</span>: -$width/<span class="number">2</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过这种方式可以使得子元素在父元素中垂直居中。但是这种实现的方式需要知道子元素的宽高，以方便使用 <code>margin-*</code> 来修正之前的位置。</p>
+<p>当不知道子元素的宽高时，这种方法就无法实现正真的垂直居中。这个时候就可以使用 <code>transform: translate(-50%, -50%);</code> 来实现子元素自身的偏移。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.chilren</span> &#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>那么不使用定位是否能够使元素垂直居中呢？</p>
+<p>这时候我们来想想要使元素水平居中的时候，我们会怎么做？Ok，一般我们都会用 <code>margin: 0 auto</code>;那么我们就可以让 <code>margin-top: 50%</code>, 这样的效果就跟相对定位时的 <code>top: 50%</code> 的效果差不多。接着就可以使用之前使用过的 <code>transform</code> 属性来使得元素向上偏移自身高度的一般，也就是 <code>transform: translateY(-50%);</code>。</p>
+<p>这样就可以实现不使用定位来来使得元素垂直居中了。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.chilren</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">50%</span> auto <span class="number">0</span>;</div><div class="line">  <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>除了上面的这些方法之外，还可以使用 Flexbox 布局来实现。</p>
+<p>只需要在父元素中使用 <code>display: flex;</code>，然后在子元素上使用 <code>margin: auto;</code> 就可以实现垂直居中了。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.chilren</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>另外还有几种实现垂直居中的方法，并不常见与常用，使用就不提了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们有这样一个结构的 HTML：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;parent&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;children&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果我们要实现 &lt;code&gt;.children&lt;/code&gt; 在 &lt;code&gt;.parent&lt;/code&gt; 中垂直居中。&lt;/p&gt;
+&lt;p&gt;通常第一印象会想起给父元素设置绝对定位，给子元素设置相对定位。这样子元素就相对于父元素定位，再通过 &lt;code&gt;top&lt;/code&gt; 与 &lt;code&gt;left&lt;/code&gt; 各偏移 50% 父元素宽度，使用 &lt;code&gt;margin-*&lt;/code&gt; 来修正子元素的位置。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sass 初探</title>
+    <link href="http://yoursite.com/2016/06/07/sass-preliminary-study/"/>
+    <id>http://yoursite.com/2016/06/07/sass-preliminary-study/</id>
+    <published>2016-06-07T13:57:57.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="为什么学-Sass"><a href="#为什么学-Sass" class="headerlink" title="为什么学 Sass"></a>为什么学 Sass</h2><p>说起来其实很早就知道 <code>Sass</code> 这东西。刚开始写 Even 这个博客主题的时候就有在考虑是要用 <code>Less</code> 还是<code>Sass</code>，最后用了变量名用 <code>@</code> 开头的 Less（可能是 PHP 的原因，对 <code>$</code> 开头的变量名没什么好感）。</p>
+<p>最近正在看 <code>Foundation</code>，源码是用 Sass 写的。<code>Bootstrap</code> 之前也是用 Less 的，不过后来也转向了 Sass。然后发现 <code>Foundation</code> 写得挺不错的，看看博客主题写的代码，简直不能看。正好打算把主题给重构重构，就顺手学学 Sass，用 Sass 写。<br><a id="more"></a></p>
+<h2 id="Sass-是什么"><a href="#Sass-是什么" class="headerlink" title="Sass 是什么"></a>Sass 是什么</h2><p>Sass 是CSS的扩展，增加了规则嵌套、变量、混合、选择器继承等等，通过使用命令行的工具把它转换成CSS代码，能够更编程语言化的写 CSS。</p>
+<p>Sass 有两种语法，<code>Sass</code> 与 <code>SCSS</code>。<code>Sass</code> 使用的是类似于 Python 的缩进语法，而 <code>SCSS</code> 使用的语法与 CSS 相近，只是添加了一些其他的东西，可以看做是 CSS 超集。</p>
+<p>PS: 使用 <code>SCSS</code> 语法的文件后缀是 <code>SCSS</code> （一定是大写）。</p>
+<h2 id="SCSS-语法"><a href="#SCSS-语法" class="headerlink" title="SCSS 语法"></a>SCSS 语法</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>上面说了，刚开始我不用 Sass 的原因就是变量名是以 <code>$</code> 开头的。与 Less 不同的是，Sass 的变量赋值使用的是 <code>:</code>，跟 CSS 的属性赋值相同。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sass style</span></div><div class="line"><span class="variable">$fontSize</span>: <span class="number">14px</span>;</div><div class="line"><span class="selector-tag">span</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="variable">$fontSize</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// css style</span></div><div class="line"><span class="selector-tag">span</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Sass 还支持多值变量，list 类型与 map 类型，与 JavaScript 中的 list, map 相似。</p>
+<p>list 类型可以使用 <code>nth($list, $index)</code> 来取得 list 中的某个值，相同的 map 也有对应的取值的函数：<code>map-get($map, $key)</code>。</p>
+<p>list 类型：<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sass style</span></div><div class="line"><span class="variable">$color-list</span>: <span class="number">#fff</span>, <span class="number">#000</span>;</div><div class="line"><span class="selector-tag">a</span> &#123;</div><div class="line">  <span class="attribute">color</span>: nth(<span class="variable">$color-list</span>, <span class="number">1</span>);</div><div class="line"></div><div class="line">  &amp;:hover &#123;</div><div class="line">    <span class="attribute">color</span>: nth(<span class="variable">$color-list</span>, <span class="number">2</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>map 类型：<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sass style</span></div><div class="line"><span class="variable">$color-map</span>: (</div><div class="line">  white: <span class="number">#fff</span>,</div><div class="line">  black: <span class="number">#000</span></div><div class="line">);</div><div class="line"><span class="selector-tag">a</span> &#123;</div><div class="line">  <span class="attribute">color</span>: map-get(<span class="variable">$color-map</span>, white);</div><div class="line"></div><div class="line">  &amp;:hover &#123;</div><div class="line">    <span class="attribute">color</span>: map-get(<span class="variable">$color-map</span>, black);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h3><p>与大部分 CSS 预处理器相同，Sass 也支持层级嵌套。这样可以更好的表示 CSS 的层级关系。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sass style</span></div><div class="line"><span class="selector-tag">ul</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">5px</span>;</div><div class="line"></div><div class="line">  <span class="selector-tag">li</span> &#123;</div><div class="line">    <span class="attribute">list-style</span>: none;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// css style</span></div><div class="line"><span class="selector-tag">ul</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">5px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</div><div class="line">  <span class="attribute">list-style</span>: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h3><p>Sass 中使用 <code>@mixin</code> 声明混合，可以传递参数，多个参数以逗号分开，也可以给参数设置默认值。声明的@mixin通过@include来调用。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//sass style</span></div><div class="line">@<span class="keyword">mixin</span> center-block &#123;</div><div class="line">    <span class="attribute">margin-left</span>:auto;</div><div class="line">    <span class="attribute">margin-right</span>:auto;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.demo</span>&#123;</div><div class="line">    @<span class="keyword">include</span> center-block;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//css style</span></div><div class="line"><span class="selector-class">.demo</span>&#123;</div><div class="line">    <span class="attribute">margin-left</span>:auto;</div><div class="line">    <span class="attribute">margin-right</span>:auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="条件与循环"><a href="#条件与循环" class="headerlink" title="条件与循环"></a>条件与循环</h3><p>一般的 CSS 是没有条件与循环的，拥有了条件与循环语句的 Sass 更加的灵活，可以使得 CSS 样式根据变量而改变。</p>
+<h4 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h4><p>Sass 中的条件语句为 <code>@if</code> 与 <code>@else</code>, 可以组合成为 <code>@else if</code>。<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sass style</span></div><div class="line"><span class="variable">$color</span>: white;</div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  @<span class="keyword">if</span> <span class="variable">$color</span> == white &#123;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  &#125;</div><div class="line">  @<span class="keyword">else</span> &#123;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#000</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// css style</span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h4><p>for循环有两种形式，分别为：<code>@for $var from &lt;start&gt; through &lt;end&gt;</code> 和 <code>@for $var from &lt;start&gt; to &lt;end&gt;</code>。<code>through</code> 与 <code>to</code> 的区别是循环包不包括 <code>&lt;end&gt;</code>。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sass style</span></div><div class="line">@<span class="keyword">for</span> <span class="variable">$i</span> from 1 through 3 &#123;</div><div class="line">  <span class="selector-class">.item-</span>#&#123;<span class="variable">$i</span>&#125; &#123; <span class="attribute">width</span>: <span class="number">2em</span> * <span class="variable">$i</span>; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// css style</span></div><div class="line"><span class="selector-class">.item-1</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">2em</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.item-2</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">4em</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.item-3</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">6em</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>each循环语法为：<code>@each $var in &lt;list or map&gt;</code>，与 JavaScript 中的 <code>each</code> 类似，即是遍历 list 或者 map。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sass style</span></div><div class="line"><span class="variable">$color-list</span>: red green yellow;</div><div class="line">@<span class="keyword">each</span> <span class="variable">$color</span> in <span class="variable">$color-list</span> &#123;</div><div class="line">  .#&#123;<span class="variable">$color</span>&#125; &#123;</div><div class="line">    <span class="attribute">color</span>: <span class="variable">$color</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// css style</span></div><div class="line"><span class="selector-class">.red</span> &#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.green</span> &#123;</div><div class="line">  <span class="attribute">color</span>: green;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.yellow</span> &#123;</div><div class="line">  <span class="attribute">color</span>: yellow;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;为什么学-Sass&quot;&gt;&lt;a href=&quot;#为什么学-Sass&quot; class=&quot;headerlink&quot; title=&quot;为什么学 Sass&quot;&gt;&lt;/a&gt;为什么学 Sass&lt;/h2&gt;&lt;p&gt;说起来其实很早就知道 &lt;code&gt;Sass&lt;/code&gt; 这东西。刚开始写 Even 这个博客主题的时候就有在考虑是要用 &lt;code&gt;Less&lt;/code&gt; 还是&lt;code&gt;Sass&lt;/code&gt;，最后用了变量名用 &lt;code&gt;@&lt;/code&gt; 开头的 Less（可能是 PHP 的原因，对 &lt;code&gt;$&lt;/code&gt; 开头的变量名没什么好感）。&lt;/p&gt;
+&lt;p&gt;最近正在看 &lt;code&gt;Foundation&lt;/code&gt;，源码是用 Sass 写的。&lt;code&gt;Bootstrap&lt;/code&gt; 之前也是用 Less 的，不过后来也转向了 Sass。然后发现 &lt;code&gt;Foundation&lt;/code&gt; 写得挺不错的，看看博客主题写的代码，简直不能看。正好打算把主题给重构重构，就顺手学学 Sass，用 Sass 写。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="Sass" scheme="http://yoursite.com/tags/Sass/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Nokogiri 解析 HTML</title>
+    <link href="http://yoursite.com/2016/05/28/using-nokogiri-parsing-html/"/>
+    <id>http://yoursite.com/2016/05/28/using-nokogiri-parsing-html/</id>
+    <published>2016-05-28T14:26:29.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Nokogiri 是 Ruby 的一个 HTML/XML 文件的解析库。在需要解析 HTML/XML 文件获取数据时，它是一个很好的选择。</p>
+<h2 id="解析-HTML-文档"><a href="#解析-HTML-文档" class="headerlink" title="解析 HTML 文档"></a>解析 HTML 文档</h2><p>使用 <code>Nokogiri</code> 解析 HTML 将会生成 <code>Nokogiri documens</code>。<br>生成该对象的方式有三种，分别是通过字符串解析，通过文件解析，通过网络解析。</p>
+<h3 id="通过字符串解析"><a href="#通过字符串解析" class="headerlink" title="通过字符串解析"></a>通过字符串解析</h3><p>通过字符串解析，即是将字符串当作函数的参数传给 <code>Nokogiri::HTML</code> 函数。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">doc = Nokogiri::HTML(<span class="string">"&lt;html&gt;&lt;body&gt;&lt;h1&gt;Ahonn&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;"</span>)</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="通过文件解析"><a href="#通过文件解析" class="headerlink" title="通过文件解析"></a>通过文件解析</h3><p>通过文件解析需要打开文件，并将文件内容当作参数。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">doc = File.open(<span class="string">"index.html"</span>) &#123; <span class="params">|f|</span> Nokogiri::HTML(f) &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="通过网络解析"><a href="#通过网络解析" class="headerlink" title="通过网络解析"></a>通过网络解析</h3><p>这是最常用的形式，即使用 <code>open-uri</code> 打开对应的网址，并返回字符串给 <code>Nokogiri</code>。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">require</span> <span class="string">"open-uri"</span></div><div class="line">doc = Nokogiri::HTMl(open(<span class="string">"http://www.ahonn.me"</span>))</div></pre></td></tr></table></figure></p>
+<h2 id="搜索-HTML-文档"><a href="#搜索-HTML-文档" class="headerlink" title="搜索 HTML 文档"></a>搜索 HTML 文档</h2><p>Nokogiri 提供 xpath 以及 css 选择器这两种方式来搜索 HTML 文档，使得我们能够获取到对应的需要的节点及数据。</p>
+<p><code>xpath</code> 方法以及 <code>css</code> 方法返回的是一个节点结果集。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">doc = Nokogiri::HTML(open(<span class="string">"http://www.ahonn.me"</span>))</div><div class="line"></div><div class="line">doc.xpath(<span class="string">"//title"</span>)</div><div class="line"></div><div class="line">doc.css(<span class="string">".nav-list a"</span>)</div><div class="line"></div><div class="line"><span class="comment"># ['&lt;a href="/" target="_self" class="nav-list-link active"&gt;Home&lt;/a&gt;',</span></div><div class="line"><span class="comment"># '&lt;a href="/archives/" target="_self" class="nav-list-link"&gt;Archives&lt;/a&gt;',</span></div><div class="line"><span class="comment"># '&lt;a href="/tags/" target="_self" class="nav-list-link"&gt;Tags&lt;/a&gt;',</span></div><div class="line"><span class="comment"># '&lt;a href="/about/" target="_self" class="nav-list-link"&gt;About&lt;/a&gt;']</span></div></pre></td></tr></table></figure>
+<h3 id="获取单个结果"><a href="#获取单个结果" class="headerlink" title="获取单个结果"></a>获取单个结果</h3><p>如果想要返回单个结果，可以使用 <code>at_xpath</code> 或者 <code>at_css</code> 方法来获取结果集中的第一个元素。<br>就是说返回的不再是结果集，而是元素节点。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">doc.at_css(<span class="string">".nav-list a"</span>)</div><div class="line"><span class="comment"># &lt;a href="/" target="_self" class="nav-list-link active"&gt;Home&lt;/a&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="获取元素属性"><a href="#获取元素属性" class="headerlink" title="获取元素属性"></a>获取元素属性</h3><p>还可通过 <code>.</code> 或者索引来获取元素的属性：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">links = doc.css(<span class="string">".nav-list a"</span>)</div><div class="line"></div><div class="line">puts links.length <span class="comment"># 4</span></div><div class="line">puts links[<span class="number">0</span>].text <span class="comment"># Home</span></div><div class="line">puts links[<span class="number">1</span>][<span class="string">'href'</span>] <span class="comment"># /archives/</span></div></pre></td></tr></table></figure></p>
+<h3 id="限制选择器"><a href="#限制选择器" class="headerlink" title="限制选择器"></a>限制选择器</h3><p>Nokogiri 还提供了自定义筛选的限制选择器，返回结果集中符合条件的元素：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">links = doc.css(<span class="string">".nav-list a"</span>).select&#123; <span class="params">|link|</span> link[<span class="string">'href'</span>] == <span class="string">"/archives/"</span> &#125;</div><div class="line"></div><div class="line">links.each &#123; <span class="params">|link|</span> puts link.text &#125;  <span class="comment"># Archives</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Nokogiri 是 Ruby 的一个 HTML/XML 文件的解析库。在需要解析 HTML/XML 文件获取数据时，它是一个很好的选择。&lt;/p&gt;
+&lt;h2 id=&quot;解析-HTML-文档&quot;&gt;&lt;a href=&quot;#解析-HTML-文档&quot; class=&quot;headerlink&quot; title=&quot;解析 HTML 文档&quot;&gt;&lt;/a&gt;解析 HTML 文档&lt;/h2&gt;&lt;p&gt;使用 &lt;code&gt;Nokogiri&lt;/code&gt; 解析 HTML 将会生成 &lt;code&gt;Nokogiri documens&lt;/code&gt;。&lt;br&gt;生成该对象的方式有三种，分别是通过字符串解析，通过文件解析，通过网络解析。&lt;/p&gt;
+&lt;h3 id=&quot;通过字符串解析&quot;&gt;&lt;a href=&quot;#通过字符串解析&quot; class=&quot;headerlink&quot; title=&quot;通过字符串解析&quot;&gt;&lt;/a&gt;通过字符串解析&lt;/h3&gt;&lt;p&gt;通过字符串解析，即是将字符串当作函数的参数传给 &lt;code&gt;Nokogiri::HTML&lt;/code&gt; 函数。&lt;br&gt;&lt;figure class=&quot;highlight ruby&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;doc = Nokogiri::HTML(&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;&amp;lt;h1&amp;gt;Ahonn&amp;lt;/h1&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&quot;&lt;/span&gt;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Ruby" scheme="http://yoursite.com/tags/Ruby/"/>
+    
+      <category term="Nokogiri" scheme="http://yoursite.com/tags/Nokogiri/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 JavaScript 实现简单的拖拽</title>
+    <link href="http://yoursite.com/2016/05/14/use-javascript-to-achieve-simple-drag-and-drop/"/>
+    <id>http://yoursite.com/2016/05/14/use-javascript-to-achieve-simple-drag-and-drop/</id>
+    <published>2016-05-14T03:09:05.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>使用 JavaScript 实现拖拽的步骤：</p>
+<ul>
+<li>让元素捕获事件（mousedown, mousemove &amp; mouseup）</li>
+<li>单击并不释放，触发 mousedown，标记开始拖拽，并获取元素和鼠标的位置</li>
+<li>拖动鼠标，触发 mousemove，不断的获取鼠标的位置，并通过计算重新确定元素的位置</li>
+<li>释放师表，触发 mouseup，结束拖拽，确定元素位置并更新</li>
+</ul>
+<p><strong>被拖拽的元素必须是相对父元素定位，或者是绝对定位</strong></p>
+<a id="more"></a>
+<iframe scrolling="no" width="100%" height="300" src="http://jsfiddle.net/Lr73mn89/embedded/result,html,css,js/light" frameborder="0" allowfullscreen></iframe>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="绑定事件"><a href="#绑定事件" class="headerlink" title="绑定事件"></a>绑定事件</h3><p>首先，对拖拽的元素绑定 mousedown 时间，使其触发对应的函数，获取元素与鼠标的位置。在 document 对象上绑定 mousemove 和 mouseup 事件，不在拖拽的元素上绑定是因为当鼠标移动太快而超出元素的范围时会停止拖拽，而绑定在 document 上则可以避免这样的事情发生。拖拽再快都不会超出 document 的范围。</p>
+<p>绑定事件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</div><div class="line"></div><div class="line">box.onmousedown = down;</div><div class="line"><span class="built_in">document</span>.onmousemove = move;</div><div class="line"><span class="built_in">document</span>.onmouseup = up;</div></pre></td></tr></table></figure></p>
+<h2 id="获取鼠标位置"><a href="#获取鼠标位置" class="headerlink" title="获取鼠标位置"></a>获取鼠标位置</h2><p>鼠标位置可以在 event 对象中获得，常用的属性有：</p>
+<ul>
+<li>clientX / clientY : 相对浏览器窗口坐标</li>
+<li>offsetX / offsetY : 相对事件目标对象坐标</li>
+<li>pageX / pageY : 相对 document 对象坐标</li>
+</ul>
+<p>一般鼠标的位置使用 <code>pageX / pageY</code> 获取，但是 IE 不支持这两个属性。所以在 IE 中使用 <code>event.clientX + document.body.scrollLeft - document.body.clientLeft;</code> 获取鼠标的位置。</p>
+<p>获取鼠标位置的函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getMouseXY</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="number">0</span>, y = <span class="number">0</span>;</div><div class="line">  e = e || <span class="built_in">window</span>.event;</div><div class="line">  <span class="keyword">if</span> (e.pageX) &#123;</div><div class="line">    x = e.pageX;</div><div class="line">    y = e.pageY;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    x = e.clientX + <span class="built_in">document</span>.body.scrollLeft - <span class="built_in">document</span>.body.clientLeft;</div><div class="line">    y = e.clientY + <span class="built_in">document</span>.body.scrollTop - <span class="built_in">document</span>.body.clientTop;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    x: x,</div><div class="line">    y: y</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="事件触发函数"><a href="#事件触发函数" class="headerlink" title="事件触发函数"></a>事件触发函数</h3><h4 id="mousedown"><a href="#mousedown" class="headerlink" title="mousedown"></a>mousedown</h4><p>当鼠标移动到元素内并点击元素不放时，触发 mousedown 事件。按照上面的步骤，这一步是获取元素与鼠标的位置，用于触发 mousemove 时计算元素的位置。</p>
+<p>mousedown 触发的函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">down</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">  dragging = <span class="literal">true</span>;</div><div class="line">  boxX = box.offsetLeft;</div><div class="line">  boxY = box.offsetTop;</div><div class="line">  mouseX = <span class="built_in">parseInt</span>(getMouseXY(e).x);</div><div class="line">  mouseY = <span class="built_in">parseInt</span>(getMouseXY(e).y);</div><div class="line">  offsetX = mouseX - boxX;</div><div class="line">  offsetY = mouseY - boxY;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>boxX / boxY</code> 为元素左上角相对于已定位的父元素（相对或者绝对定位的父元素）的偏移的像素值，即元素左上角的坐标。</p>
+<p><code>mouseX / mouseY</code> 是通过 <code>getMouseXY</code> 函数获得的鼠标的坐标。</p>
+<p><code>offsetX/ offsetY</code> 是鼠标相对于元素坐标（左上角坐标）的坐标。</p>
+<h4 id="mousemove"><a href="#mousemove" class="headerlink" title="mousemove"></a>mousemove</h4><p>当鼠标移动时，不断的获取鼠标的位置，并计算元素的新坐标修改元素的位置样式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">move</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (dragging) &#123;</div><div class="line">    <span class="keyword">var</span> x = getMouseXY(e).x - offsetX;</div><div class="line">    <span class="keyword">var</span> y = getMouseXY(e).y - offsetY;</div><div class="line">    <span class="keyword">var</span> width = <span class="built_in">document</span>.documentElement.clientWidth - box.offsetWidth;</div><div class="line">    <span class="keyword">var</span> height = <span class="built_in">document</span>.documentElement.clientHeight - box.offsetHeight;</div><div class="line"></div><div class="line">    x = <span class="built_in">Math</span>.min(<span class="built_in">Math</span>.max(<span class="number">0</span>, x), width);</div><div class="line">    y = <span class="built_in">Math</span>.min(<span class="built_in">Math</span>.max(<span class="number">0</span>, y), height);</div><div class="line"></div><div class="line">    box.style.left = x + <span class="string">'px'</span>;</div><div class="line">    box.style.top = y + <span class="string">'px'</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>变量 <code>width / height</code> 表示可移动的位置的大小，这里是 document 减去元素的大小（元素不会超出可移动的范围）。</p>
+<p><code>Math.min</code> 使得元素不会超出可移动访问的右边界（元素 x 坐标不会超过 width），<code>Math.max</code> 使得元素不会超出可移动范围的左边界（元素的 x 坐标不小于 0）。</p>
+<p>最后将改变后的元素 <code>left</code> 与 <code>top</code> 值应用当元素上，即修改元素的样式。</p>
+<h4 id="mouseup"><a href="#mouseup" class="headerlink" title="mouseup"></a>mouseup</h4><p>拖拽结束，取消拖拽的标记。使其触发 mousemove 事件，但不做任何处理。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">up</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">  dragging = <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>上面使用的简单的 JavaScript 代码实现了元素的拖拽，但并没有对兼容性问题全面考虑，也没有对性能优化，有不必要的事件触发。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步骤&lt;/h2&gt;&lt;p&gt;使用 JavaScript 实现拖拽的步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让元素捕获事件（mousedown, mousemove &amp;amp; mouseup）&lt;/li&gt;
+&lt;li&gt;单击并不释放，触发 mousedown，标记开始拖拽，并获取元素和鼠标的位置&lt;/li&gt;
+&lt;li&gt;拖动鼠标，触发 mousemove，不断的获取鼠标的位置，并通过计算重新确定元素的位置&lt;/li&gt;
+&lt;li&gt;释放师表，触发 mouseup，结束拖拽，确定元素位置并更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;被拖拽的元素必须是相对父元素定位，或者是绝对定位&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记第一次面试</title>
+    <link href="http://yoursite.com/2016/05/14/the-first-interview/"/>
+    <id>http://yoursite.com/2016/05/14/the-first-interview/</id>
+    <published>2016-05-13T16:23:31.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>记录第一次面试 流水账 想到什么写什么</p>
+</blockquote>
+<p>第一次正正经经的去面试，虽然只是个软件开发暑期实习生。</p>
+<p>刚开始是在网上无聊的逛 V2EX 什么的，然后看了看 conde 社区。后来神不知鬼不觉的不知道为什么就跑到了 Ruby China 去了，又神不知鬼不觉的跑去看了招聘的版块。</p>
+<p>其实在这之前的两个星期都有在拉钩上投实习，虽然有几个简历通过了，但是却毫无沟通的直接定了面试时间。不是刚刚好顶到上课时间，就是早上 10 点的（也就是说我得早上 7 点起床赶去广州面试）。说实在的对那些公司兴趣也不是很大。<br><a id="more"></a></p>
+<p>后来就如上所说的，在逛 Ruby China 招聘板块的时候，看到了广州的一家公司招暑假实习生的帖子。遂留言问问看招不招大二的，说是招大二的。看了看条件，感觉也好像没有什么条件，大概是大二吧，可能就是对技术有兴趣，自学能力强一点的就 OK 了。跟之前拉钩上投的公司不一样，不会感觉很单调死板看不到特色。帖子贴了很多照片，感觉是一群很有趣的人，应该是个实习的好去处呢。</p>
+<p>说是要中英文简历，那时候正好也刚写好了在线简历，不过倒是没有英文版呢。一直惦记着要投简历去那家公司，但是又一直拖啊拖的没有去写英文版。大概拖了 3 天，那天下午把英文的给加上了，然后就简历发过去了。之后那边回了邮件，还是用的英文回的。说是什么现在在越南，五月初回来广州会联系我。回英文邮件还真是头疼，纠结了大半天。</p>
+<p>然后就是等啊等啊等啊。</p>
+<p>上周接了该公司一个姐姐的电话，问我说下周什么时候有空面试。然后我很果断的说了下周三（我忘记了下周补课这回事了），挂了电话之后直接懵逼了。。。光这点就给好评了，那些直接定时间真的让我好难办啊。后面到了面试的那天，本来打算早上上完课吃完饭就直接出发的，可是肚子这个时候不舒服，回了下宿舍。结果就错过了本来计划好的那班公交车，坐了下一班，导致面试迟到了，妈个鸡。</p>
+<p>面试地点本来是在公司的，后面说是隔壁装修声音太大，改到了一个小咖啡馆里。话说这咖啡馆还真是难找，绕了两圈才找到。进门看见两个人用着 Macbook 写代码，应该是面试官了（因为没有其他人了）。接着就是先做一个钟的笔试题，拿到的瞬间有点懵逼…居然是全英文的…不过还好平时也有看看英文的文档什么的，看得懂七七八八。Ruby 跟 Rails 部分几乎不会，只过了一遍 Rails Guides 里的入门教程。然后 JavaScript 也是挺懵逼的，都是用 JQuery（果然还是得去搞搞 jQuery 啊）。最后面也只是写了个实现其他编程语言中的 pow 函数，可能是太紧张了，忘记考虑指数为负的情况了。好弱鸡…还有用 jQuery 实现 DOM 拖拽的，瞄过几眼，但是压根没办法直接写出来啊，找个时间的好好看看。</p>
+<p>手写代码果然还是觉得好别扭…</p>
+<p>笔试真的是绝对的懵逼，我给自己打 20 分。不过后面面试倒是很轻松，感觉好像没问什么东西，纯瞎聊得感觉。不过说得很对，我的确是缺个能带的人。虽然自己有一些想法，但是总是没办法起手开搞。那些所谓的项目也都是自己觉得好玩搞的，都没有一个算是实实际际的项目的。</p>
+<p>总结一下面试，就是从笔试题跟简历入手去问。好像面试我的时候没问什么东西，面试过程倒是挺愉快的。不过感觉招大二的话好像不是很看重笔试题，跟看重对技术的热情？毕竟 Ruby 什么的是可以学的。</p>
+<p>昨天小伙伴 yzz 也去那里面试，不过面试地点这一次就没有改了。正好下午也只是一节体育课，就跟着去了，去看看公司长啥样。第一感觉是家庭小作坊，类似美剧硅谷里面他们的那种环境，感觉很赞啊。要是像正常的公司那样的话，感觉融入感不强。这样的地方实习感觉会很开心啊。Boss 是个黑人，工位也和普通员工一样。yzz 做笔试题的时候好像听到 Boss 说什么什么 coding 什么的，Boss 好像也是撸代码的呢，不错。每个人的工作环境就是理想中的那样，外接大屏幕，舒服的椅子，有些有机械键盘，这样的编码环境完美。</p>
+<p>哦，对了。好像刚进去的时候有一股榴莲味，估计是中午的饭后水果呢。比较自由的感觉，给人一种小家庭的feel。不过面试过程好像比面试我要问得多，小伙伴也可能因为紧张，原来懂得东西都不知道该怎么说了，我都替他紧张了。倒是面试过程也不是很严肃，面试官换了一个，不过也觉得挺 nice 的。面试完之后一个姐姐带着我们逛了一下里面（应该是打电话发邮件确定面试的那位？），然后就走啦。走的时候他们都坐在沙发上聊天吃东西呢好像，越来越觉得 nice 了。要是能通过的话估计实习会收获很多啊，不管什么方面。</p>
+<p>流水账般的写完了，小学语文水平…天…</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;记录第一次面试 流水账 想到什么写什么&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第一次正正经经的去面试，虽然只是个软件开发暑期实习生。&lt;/p&gt;
+&lt;p&gt;刚开始是在网上无聊的逛 V2EX 什么的，然后看了看 conde 社区。后来神不知鬼不觉的不知道为什么就跑到了 Ruby China 去了，又神不知鬼不觉的跑去看了招聘的版块。&lt;/p&gt;
+&lt;p&gt;其实在这之前的两个星期都有在拉钩上投实习，虽然有几个简历通过了，但是却毫无沟通的直接定了面试时间。不是刚刚好顶到上课时间，就是早上 10 点的（也就是说我得早上 7 点起床赶去广州面试）。说实在的对那些公司兴趣也不是很大。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从 optimizeCb 说起</title>
+    <link href="http://yoursite.com/2016/05/03/starting-from-the-optimizeCb/"/>
+    <id>http://yoursite.com/2016/05/03/starting-from-the-optimizeCb/</id>
+    <published>2016-05-03T02:24:20.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="optimizeCb"><a href="#optimizeCb" class="headerlink" title="optimizeCb"></a>optimizeCb</h2><p>在 <code>underscore</code> 中的内部函数 <code>optimizeCb</code>，顾名思义就是 optimize callback，即优化回调函数。</p>
+<p>optimizeCb:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Internal function that returns an efficient (for current engines) version</span></div><div class="line"><span class="comment">// of the passed-in callback, to be repeatedly applied in other Underscore</span></div><div class="line"><span class="comment">// functions.</span></div><div class="line"><span class="keyword">var</span> optimizeCb = <span class="function"><span class="keyword">function</span>(<span class="params">func, context, argCount</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (context === <span class="keyword">void</span> <span class="number">0</span>) <span class="keyword">return</span> func;</div><div class="line">  <span class="keyword">switch</span> (argCount == <span class="literal">null</span> ? <span class="number">3</span> : argCount) &#123;</div><div class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> func.call(context, value);</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// The 2-parameter case has been omitted only because no current consumers</span></div><div class="line">    <span class="comment">// made use of it.</span></div><div class="line">    <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">value, index, collection</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> func.call(context, value, index, collection);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">accumulator, value, index, collection</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> func.call(context, accumulator, value, index, collection);</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> func.apply(context, <span class="built_in">arguments</span>);</div><div class="line">  &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>它是这样处理回调的，当回调函数指定上下文环境时，根据 <code>argCount</code> 来分情况使用 <code>call</code>，不同情况的<br>区别只是 <code>call</code> 除了上下文环境之外的函数参数的个数不同。</p>
+<p>除了参数个数为 1，3，4 使用 <code>call</code> 之外，其他情况使用 <code>apply</code>。这里原本存在的参数个数为 2 的<br>情况被删除了，原因是因为参数为 2 个的情况在 <code>underscore</code> 中基本没有。就是说，对于常用的情况<br>使用 <code>call</code>，而不常用的使用 <code>apply</code>。</p>
+<p>那么是不是 <code>call</code> 的性能相较于 <code>apply</code> 更好呢？</p>
+<h2 id="call-与-apply-的性能"><a href="#call-与-apply-的性能" class="headerlink" title="call 与 apply 的性能"></a>call 与 apply 的性能</h2><p>使用 <code>optimizeCb</code> 与只使用 <code>apply</code> 的 <code>Cb</code> 进行比较</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Benchmark = <span class="built_in">require</span>(<span class="string">'benchmark'</span>);</div><div class="line"><span class="keyword">var</span> suite = <span class="keyword">new</span> Benchmark.Suite;</div><div class="line"></div><div class="line"><span class="keyword">var</span> optimizeCb = <span class="function"><span class="keyword">function</span>(<span class="params">func, context, argCount</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (context === <span class="keyword">void</span> <span class="number">0</span>) <span class="keyword">return</span> func;</div><div class="line">  <span class="keyword">switch</span> (argCount == <span class="literal">null</span> ? <span class="number">3</span> : argCount) &#123;</div><div class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> func.call(context, value);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">value, index, collection</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> func.call(context, value, index, collection);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">accumulator, value, index, collection</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> func.call(context, accumulator, value, index, collection);</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> func.apply(context, <span class="built_in">arguments</span>);</div><div class="line">  &#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> Cb = <span class="function"><span class="keyword">function</span>(<span class="params">func, context</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> func.apply(context, <span class="built_in">arguments</span>);</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b, c</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> a + b + c;</div><div class="line">&#125;</div><div class="line"></div><div class="line">suite</div><div class="line">  .add(<span class="string">'optimizeCb'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    optimizeCb(sum, <span class="keyword">this</span>, <span class="number">3</span>)(<span class="number">24</span>, <span class="number">24</span>, <span class="number">24</span>);</div><div class="line">  &#125;)</div><div class="line">  .add(<span class="string">'Cb'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    cb(sum, <span class="keyword">this</span>)(<span class="number">24</span>, <span class="number">24</span>, <span class="number">24</span>);</div><div class="line">  &#125;)</div><div class="line">  .on(<span class="string">'cycle'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="built_in">String</span>(event.target));</div><div class="line">  &#125;)</div><div class="line">  .on(<span class="string">'complete'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Fastest is '</span> + <span class="keyword">this</span>.filter(<span class="string">'fastest'</span>).map(<span class="string">'name'</span>));</div><div class="line">  &#125;)</div><div class="line">  .run(&#123; <span class="string">'async'</span>: <span class="literal">true</span> &#125;);</div></pre></td></tr></table></figure>
+<p>测试结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">optimizeCb x 16,373,430 ops/sec ±0.93% (80 runs sampled)</div><div class="line">cb x 8,729,305 ops/sec ±1.12% (90 runs sampled)</div><div class="line">Fastest is optimizeCb</div></pre></td></tr></table></figure></p>
+<p>得出 <code>call</code> 在知道参数个数的时候比使用 <code>apply</code> 效率更高的结论。<br>通过搜索，找到了一篇 <a href="http://blog.csdn.net/zhengyinhui100/article/details/7837127" target="_blank" rel="external">call和apply性能对比</a>。</p>
+<p>更严谨的说法是，当有this指向或者执行参数时，call的性能要明显优于apply。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>所以在编程过程中，如果要使用到 <code>call</code> 或者 <code>apply</code>，在知道参数个数的情况下，使用 <code>call</code> 是<br>一个好选择，使得编译器能够去优化。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;optimizeCb&quot;&gt;&lt;a href=&quot;#optimizeCb&quot; class=&quot;headerlink&quot; title=&quot;optimizeCb&quot;&gt;&lt;/a&gt;optimizeCb&lt;/h2&gt;&lt;p&gt;在 &lt;code&gt;underscore&lt;/code&gt; 中的内部函数 &lt;code&gt;optimizeCb&lt;/code&gt;，顾名思义就是 optimize callback，即优化回调函数。&lt;/p&gt;
+&lt;p&gt;optimizeCb:&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Internal function that returns an efficient (for current engines) version&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// of the passed-in callback, to be repeatedly applied in other Underscore&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// functions.&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; optimizeCb = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;func, context, argCount&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (context === &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; func;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; (argCount == &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt; ? &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; : argCount) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;: &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;value&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; func.call(context, value);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// The 2-parameter case has been omitted only because no current consumers&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// made use of it.&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;: &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;value, index, collection&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; func.call(context, value, index, collection);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;: &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;accumulator, value, index, collection&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; func.call(context, accumulator, value, index, collection);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; func.apply(context, &lt;span class=&quot;built_in&quot;&gt;arguments&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="Underscore" scheme="http://yoursite.com/tags/Underscore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不合常理的变量提升</title>
+    <link href="http://yoursite.com/2016/04/28/javascript-hoisting/"/>
+    <id>http://yoursite.com/2016/04/28/javascript-hoisting/</id>
+    <published>2016-04-28T13:56:42.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h2><h3 id="合乎常理的预期"><a href="#合乎常理的预期" class="headerlink" title="合乎常理的预期"></a>合乎常理的预期</h3><p>按照合乎常理的预期，程序应该是由上至下一行一行执行的，如果使用了之前没有定义的变量的话，正确的反应应该是会报错，就象下面这段 C++ 代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, &amp;n);  <span class="comment">// Error</span></div><div class="line"></div><div class="line">  <span class="keyword">int</span> n = <span class="number">2</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="并不完全正确"><a href="#并不完全正确" class="headerlink" title="并不完全正确"></a>并不完全正确</h3><p>实际上合乎常理的预期并不是“完全正确”的，在 JavaScript 中并不符合直觉。</p>
+<p>例如这段 JavaScript 代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(n);</div><div class="line"></div><div class="line"><span class="keyword">var</span> n = <span class="number">2</span>；</div></pre></td></tr></table></figure>
+<p>讲道理，就直觉来说这段代码应该是会报错的。但是 JavaScript 却不是像往常的其他编程语言一样报错，而是输出 undefined。</p>
+<p>先把问题留着，再看看另一段代码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(n);</div><div class="line"></div><div class="line">n = <span class="number">2</span>;</div></pre></td></tr></table></figure>
+<p>这段代码的输出同样也是 undefined，实际上这两段代码在编译器上是没有差别的，第一段代码实际上是按照第二段代码那样执行的。就像是变量的声明部分从原来的位置移动到了当前作用域最顶部，这个过程就叫作 <strong>提升</strong>。只有声明本身会被提升，而赋值操作依旧会留着原地。</p>
+<h2 id="函数提升"><a href="#函数提升" class="headerlink" title="函数提升"></a>函数提升</h2><p>函数在声明时也会像变量一样被提升。但是不同的是，函数表达式不会被提升。</p>
+<h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><p>函数声明提升：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">foo();</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(n);</div><div class="line">  <span class="keyword">var</span> n = <span class="number">2</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>实际上代码将会按照下面的形式执行：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> n;</div><div class="line">  <span class="built_in">console</span>.log(n);</div><div class="line">  n = <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(); <span class="comment">// undefined</span></div></pre></td></tr></table></figure></p>
+<p>函数 <code>foo</code> 的作用域内的变量 <code>n</code> 提升到了作用域的顶部，全局作用域里的 <code>foo</code> 函数声明也会被提前到所处的作用域顶部，即全局作用域的顶部。但是函数表达式的话只有变量被声明，但是赋值给变量的函数不会被提升。</p>
+<h3 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h3><p>函数表达式不会被提升：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">foo();</div><div class="line"></div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>函数表达式的提升类似与变量的提升：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo;</div><div class="line"></div><div class="line">foo(); <span class="comment">// TypeError</span></div><div class="line"></div><div class="line">foo = <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样会引发 <code>TypeError</code> 异常，因为当时的 <code>foo</code> 并没有赋值，对 <code>undefined</code> 进行函数调用会导致非法操作抛出异常。</p>
+<h3 id="函数优先"><a href="#函数优先" class="headerlink" title="函数优先"></a>函数优先</h3><p>函数会首先被提升，然后跟着才是变量。也就是说同时存在函数声明与函数表达式时，函数声明会优先于函数表达式提升。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">foo();</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'1'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'2'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面的代码将会被理解成下面的形式：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'1'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> foo;</div><div class="line"></div><div class="line">foo(); <span class="comment">// 1</span></div><div class="line"></div><div class="line">foo = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'2'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>所以实际上的输出是 1，因为函数表达式的赋值操作会在原来的位置，而声明操作则是提升到作用域顶部，但是优先级低于函数声明。</p>
+<p>重复声明同名变量在 JavaScript 非严格模式中将会被忽略，所以实际上函数表达式的位置并没有改变。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;变量提升&quot;&gt;&lt;a href=&quot;#变量提升&quot; class=&quot;headerlink&quot; title=&quot;变量提升&quot;&gt;&lt;/a&gt;变量提升&lt;/h2&gt;&lt;h3 id=&quot;合乎常理的预期&quot;&gt;&lt;a href=&quot;#合乎常理的预期&quot; class=&quot;headerlink&quot; title=&quot;合乎常理的预期&quot;&gt;&lt;/a&gt;合乎常理的预期&lt;/h3&gt;&lt;p&gt;按照合乎常理的预期，程序应该是由上至下一行一行执行的，如果使用了之前没有定义的变量的话，正确的反应应该是会报错，就象下面这段 C++ 代码：&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, &amp;amp;n);  &lt;span class=&quot;comment&quot;&gt;// Error&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>事件流：冒泡与捕获</title>
+    <link href="http://yoursite.com/2016/04/16/javascript-event-stream/"/>
+    <id>http://yoursite.com/2016/04/16/javascript-event-stream/</id>
+    <published>2016-04-16T03:29:49.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p>事件流描述的是从页面中接收事件的顺序。在 JavaScript 中事件流有两种，一种是由 IE 开发团队提出的事件冒泡流，而另一种是 Netscape 提出的事件捕获流。</p>
+<h3 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h3><p>事件冒泡流，即事件开始时由具体的元素接收，然后逐级向上传播，直到 document 对象。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span> Click <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>上面的例子中，点击 <code>p</code> 元素，事件冒泡的顺序是 p &gt; div &gt; body &gt; html &gt; document。</p>
+<p><strong>所有的现代浏览器都支持事件冒泡，部分具体实现不同。</strong></p>
+<h3 id="事件捕获"><a href="#事件捕获" class="headerlink" title="事件捕获"></a>事件捕获</h3><p>事件捕获流，即与事件冒泡相反，先在上级元素接收，然后逐级向下传播，直到最具体的元素。（有点像是逐级定位，到最后的元素就是事件冒泡流的起点）</p>
+<p>和上面同样的例子，点击 <code>p</code> 元素，事件捕获的顺序是 document &gt; html &gt; body &gt; div &gt; p。</p>
+<p><strong>由于老版本不支持，因此很少使用事件捕获。尽量使用事件冒泡。</strong></p>
+<h3 id="DOM-事件流"><a href="#DOM-事件流" class="headerlink" title="DOM 事件流"></a>DOM 事件流</h3><p>实际上每一次触发事件都会有一个事件流，事件流包括三个阶段，事件捕获阶段，处于目标阶段，事件冒泡阶段。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span> Event <span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span> Cilck <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>即在上面的例子中，事件流包括</p>
+<ul>
+<li>事件捕获阶段：document &gt; html &gt; body</li>
+<li>处于目标阶段：div</li>
+<li>事件冒泡阶段：body &gt; html &gt; document</li>
+</ul>
+<h2 id="事件处理程序"><a href="#事件处理程序" class="headerlink" title="事件处理程序"></a>事件处理程序</h2><p>添加事件处理程序的方式有 3 种：使用 HTML 的特性，赋值给事件处理程序属性，使用 addEventListener 函数。</p>
+<h3 id="使用-HTML-的特性"><a href="#使用-HTML-的特性" class="headerlink" title="使用 HTML 的特性"></a>使用 HTML 的特性</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Click"</span> <span class="attr">onclick</span>=<span class="string">"alert('Clicked')"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这样就是在 HTML 中使用 HTML 中与事件处理程序同名的属性来指定。也可以将该属性的值指向页面中其他地方定义的方法。</p>
+<p>通常不建议这样做，这样写的缺点是 HTML 与 JavaScript 紧密耦合，修改起来也麻烦。</p>
+<h3 id="赋值给事件处理程序属性"><a href="#赋值给事件处理程序属性" class="headerlink" title="赋值给事件处理程序属性"></a>赋值给事件处理程序属性</h3><p>这是 JavaScript 中指定事件处理程序的传统方式，将一个函数赋值给事件处理程序属性。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"Click"</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</div><div class="line">btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">"Clicked"</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>这样的效果其实与使用 HTML 特性的例子的作用是相同的，不同的是 JavaScript 指定事件在 js 文件中，这样就与 HTML 解耦了。要删除指定的事件处理程序可以将属性的值设置为 null。</p>
+<p>赋值给事件处理程序属性的缺点在与对同一个元素的同一个事件只能添加一个事件处理程序。重复添加相同的事件会覆盖前面所添加的事件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">"Clicked-01"</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">"Clicked-02"</span>);  <span class="comment">// 覆盖了上面设置的 onclick 事件</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="使用-addEventListener-函数"><a href="#使用-addEventListener-函数" class="headerlink" title="使用 addEventListener 函数"></a>使用 addEventListener 函数</h3><p>使用 <code>addEventListener()</code> 的好处是可以添加多个同一事件的处理程序，不会像使用事件处理程序属性一样覆盖。</p>
+<p><code>addEventListener()</code> 有对应的删除事件的方法 <code>removeEventListener()</code>，两个方法都接受三个参数。要处理的事件类型（click, blur …），作为事件处理程序的函数，以及表示是否在捕获阶段调用的布尔值。</p>
+<h4 id="添加事件处理程序"><a href="#添加事件处理程序" class="headerlink" title="添加事件处理程序"></a>添加事件处理程序</h4><p>给按钮的 click 事件添加事件处理程序：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</div><div class="line">btn.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">"click"</span>);</div><div class="line">&#125;, <span class="literal">false</span>);</div></pre></td></tr></table></figure></p>
+<p>上面为按钮添加了一个 click 事件处理程序，并且该事件会在冒泡阶段被触发。（第三个参数默认为 false, 上面的例子中可忽略不写）</p>
+<p>为同一个元素添加同一个事件的对个事件处理程序函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">btn.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">"Clicked-01"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">btn.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">"Clicked-02"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>这里给按钮的 click 事件添加了两个事件处理程序，这两个事件处理程序会按照添加的顺序触发。首先显示 “Clicked-01”，然后显示 “Clicked-02”。</p>
+<h4 id="移除事件处理程序"><a href="#移除事件处理程序" class="headerlink" title="移除事件处理程序"></a>移除事件处理程序</h4><p>使用 <code>addEventListener()</code> 添加的事件处理程序，可以通过 <code>removeEventListener()</code> 来移除，但是两个函数的参数必须相同。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">"Cilcked"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">btn.addEventListener(<span class="string">'click'</span>, handler, <span class="literal">false</span>);</div><div class="line"></div><div class="line">btn.removeEventListener(<span class="string">'click'</span>, handler, <span class="literal">true</span>);  <span class="comment">// 无效</span></div><div class="line"></div><div class="line">btn.removeEventListener(<span class="string">'click'</span>, handler, <span class="literal">false</span>);  <span class="comment">// 有效</span></div></pre></td></tr></table></figure>
+<p>大多数情况下，都是讲事件处理程序添加到事件流的冒泡阶段，这样可以最大限度地兼容各个浏览器。只在需要在事件到达目标之截获的时候将事件处理程序添加到捕获阶段</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;事件流&quot;&gt;&lt;a href=&quot;#事件流&quot; class=&quot;headerlink&quot; title=&quot;事件流&quot;&gt;&lt;/a&gt;事件流&lt;/h2&gt;&lt;p&gt;事件流描述的是从页面中接收事件的顺序。在 JavaScript 中事件流有两种，一种是由 IE 开发团队提出的事件冒泡流，而另一种是 Netscape 提出的事件捕获流。&lt;/p&gt;
+&lt;h3 id=&quot;事件冒泡&quot;&gt;&lt;a href=&quot;#事件冒泡&quot; class=&quot;headerlink&quot; title=&quot;事件冒泡&quot;&gt;&lt;/a&gt;事件冒泡&lt;/h3&gt;&lt;p&gt;事件冒泡流，即事件开始时由具体的元素接收，然后逐级向上传播，直到 document 对象。&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt; Click &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>作用域与闭包</title>
+    <link href="http://yoursite.com/2016/04/04/javascript-closures/"/>
+    <id>http://yoursite.com/2016/04/04/javascript-closures/</id>
+    <published>2016-04-04T14:43:59.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>在 JavaScript 中变量的作用域与其他语言不同，JavaScript 的作用域不是由 <code>{}</code> 来界定，而是函数。所以循环实际上是在全局作用域中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(i); <span class="comment">// 10</span></div></pre></td></tr></table></figure>
+<h3 id="全局变量-amp-局部变量"><a href="#全局变量-amp-局部变量" class="headerlink" title="全局变量 &amp; 局部变量"></a>全局变量 &amp; 局部变量</h3><p>JavaScript 变量的作用域分为两种，全局和局部。</p>
+<p>在 JavaScript 中声明全局变量有两种方式，一种是在全局环境下使用 <code>var</code> 声明，另一种是在任何地方直接初始化变量，那么它将会是全局变量。</p>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">'ahonn'</span>;   <span class="comment">// 全局变量</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  name = <span class="string">'ahonn'</span>;   <span class="comment">// 还是全局变量</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>除了在任意地方直接初始化声明全局变量这一特殊之处外，JavaScript 全局变量还可以在函数内部直接读取。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">'ahonn'</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(name);</div><div class="line">&#125;</div><div class="line"></div><div class="line">f1(); <span class="comment">// 'ahonn'</span></div></pre></td></tr></table></figure></p>
+<p>在函数中使用 <code>var</code> 定义的变量为局部变量。因为 JavaScript 的作用域是由函数界定，那么理所当然的函数外部是无法读取函数内部的局部变量。这一点其实其他的编程语言也是这样的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> name = <span class="string">'ahonn'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name) <span class="comment">// Error</span></div></pre></td></tr></table></figure>
+<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>作用域链的原理与原型链很类似。在某个环境中为了读取变量时，会沿着作用域链来搜索这个变量，从作用域链的前端开始，向上级搜索。如果在当前局部环境中没有找到该变量，则继续沿作用域链向上搜索，直到最顶层。搜索到该变量时将停止搜索，如果到最后还是没有找到该变量，那么意味着这个变量是未定义的，即它的值为 <code>undefined</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">'a'</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> b = <span class="string">'b'</span>;</div><div class="line">  <span class="built_in">console</span>.log(a + b);</div><div class="line">&#125;</div><div class="line"></div><div class="line">f1() <span class="comment">// 'ab'</span></div></pre></td></tr></table></figure>
+<p>在这个例子中，在全局环境中定义了全局变量 a，然后在函数中定义了局部变量 b。函数通过 <code>console.log</code> 输出 a + b。</p>
+<p>首先在当前的局部环境中搜索变量 a 的值，没有找到。那么继续向上一级搜索，在全局环境中找到标识符为 a 的变量的值 ‘a’。接着在局部环境中搜索变量 b，得到局部变量 b 的值 ‘b’。最后输入变量 a 和 b 的值拼接后的字符串的值。</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>函数外部无法读取函数内部定义的局部变量，所以当我们需要读取局部变量时就需要使用到闭包。</p>
+<p>那么闭包是什么呢？我的理解是函数返回一个局部作用域来使得函数外部能够读取函数内部的变量。因为 JavaScript 中作用域的界定是由函数来完成的，所以实际上也就是在函数中再返回一个函数。闭包将函数内外给联系了起来。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> name = <span class="string">'ahonn'</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(name);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> f2 = f1();</div><div class="line">f2(); <span class="comment">// 'ahonn'</span></div></pre></td></tr></table></figure>
+<p>一般情况下，当函数执行后，函数所在的局部环境将被销毁，也就是说函数在执行后函数中的变量是会被销毁的，在内存中就仅存在全局环境，即全局变量。</p>
+<p>但是使用闭包的情况又有所不同，在函数内部定义的匿名函数会包含函数（外部函数，即包含匿名函数的函数）中的变量。在外部函数执行完毕后，原本应该被销毁的局部变量不会被销毁，因为闭包的作用域链仍然在引用这些局部函数，内存的垃圾回收机制不会回收这部分变量所在的内存空间。直到匿名函数被销毁后，这些局部对象才会被销毁。</p>
+<h3 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h3><p>由于闭包使得函数中的局部变量不会被垃圾回收机制回收，会依然存在于内存中，所以使用闭包的内存消耗很大，所以大量的使用闭包会造成性能问题。另外，在IE中可能会导致内存泄漏。解决方法是在退出函数前将不使用的局部变量全部删除。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> e = <span class="built_in">document</span>.getElementById(<span class="string">'id'</span>);</div><div class="line">  <span class="keyword">var</span> id = e.id;</div><div class="line"></div><div class="line">  e.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(id);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  e = <span class="literal">null</span>; <span class="comment">// 删除不使用的局部变量值，只将需要的 id 保存为副本</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;作用域&quot;&gt;&lt;a href=&quot;#作用域&quot; class=&quot;headerlink&quot; title=&quot;作用域&quot;&gt;&lt;/a&gt;作用域&lt;/h2&gt;&lt;p&gt;在 JavaScript 中变量的作用域与其他语言不同，JavaScript 的作用域不是由 &lt;code&gt;{}&lt;/code&gt; 来界定，而是函数。所以循环实际上是在全局作用域中。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;; i++) &amp;#123;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(i); &lt;span class=&quot;comment&quot;&gt;// 10&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;全局变量-amp-局部变量&quot;&gt;&lt;a href=&quot;#全局变量-amp-局部变量&quot; class=&quot;headerlink&quot; title=&quot;全局变量 &amp;amp; 局部变量&quot;&gt;&lt;/a&gt;全局变量 &amp;amp; 局部变量&lt;/h3&gt;&lt;p&gt;JavaScript 变量的作用域分为两种，全局和局部。&lt;/p&gt;
+&lt;p&gt;在 JavaScript 中声明全局变量有两种方式，一种是在全局环境下使用 &lt;code&gt;var&lt;/code&gt; 声明，另一种是在任何地方直接初始化变量，那么它将会是全局变量。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开始记录</title>
+    <link href="http://yoursite.com/2016/04/01/begin/"/>
+    <id>http://yoursite.com/2016/04/01/begin/</id>
+    <published>2016-04-01T13:38:31.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="欣喜"><a href="#欣喜" class="headerlink" title="欣喜"></a>欣喜</h2><p>这两天迎来了 Hexo 博客主题 even 真正意义上的第一个用户 <a href="https://www.ileyar.com" target="_blank" rel="external">Leyar</a> ，第一次可以看到博客主题别人用上的效果。</p>
+<p><img src="http://7xqvel.com1.z0.glb.clouddn.com/ileyar.png" alt=""></p>
+<p>虽然主题还有很多问题存在，但我会慢慢去完善它。期待越来越多的用户~</p>
+<a id="more"></a>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>看了这个博客之后，发觉自己的小地方实在是太过冰冷了，毫无生气。所以开始打算在博客上也写写生活，写写想法。</p>
+<p>其实刚开始的我很喜欢在网络上表达自己的所有想法，但是后来却渐渐的不想去发，微博，朋友圈，什么都好。即使发过了之后依旧会回去删掉它，只留下了那些赞数很多或者评论很多的。或许这是一种没有安全感的表现吧，我不知道。曾经的微博数量1000+，后来因为某些事情全部删除了。现在每次看到微博都会后悔当初。我没有为自己的过去留下什么文字，图片。</p>
+<p>我想要记录生活，博客不止是技术积累，也是生活积累，让三年，五年甚至多年以后的我可以看到过去的某年某天。</p>
+<p>So，begin here ..</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;欣喜&quot;&gt;&lt;a href=&quot;#欣喜&quot; class=&quot;headerlink&quot; title=&quot;欣喜&quot;&gt;&lt;/a&gt;欣喜&lt;/h2&gt;&lt;p&gt;这两天迎来了 Hexo 博客主题 even 真正意义上的第一个用户 &lt;a href=&quot;https://www.ileyar.com&quot;&gt;Leyar&lt;/a&gt; ，第一次可以看到博客主题别人用上的效果。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xqvel.com1.z0.glb.clouddn.com/ileyar.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;虽然主题还有很多问题存在，但我会慢慢去完善它。期待越来越多的用户~&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>奇怪的原型链</title>
+    <link href="http://yoursite.com/2016/03/29/javascript-prototype-chain/"/>
+    <id>http://yoursite.com/2016/03/29/javascript-prototype-chain/</id>
+    <published>2016-03-29T15:22:03.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 JavaScript 中一切皆为对象（Object），但是却与 Java，C++ 等语言不同，没有“类”的概念，也没有所谓的“子类”和“父类”。JavaScript 中的对象是基于原型（prototype）来实现面向对象的，靠奇怪的原型链（prototype chain）来实现继承。</p>
+<h2 id="对象与原型"><a href="#对象与原型" class="headerlink" title="对象与原型"></a>对象与原型</h2><p>在 JavaScript 中创建对象使用 <code>new</code> 关键字，而后跟着的是构造函数。在 JavaScript 中没有类的概念，所以对象的构造函数就是单纯只是个函数（function）。</p>
+<a id="more"></a>
+<p>创建自定义构造函数并使用构造函数创建对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function Person() &#123;</div><div class="line">  this.name = &apos;ahonn&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var p1 = new Person();</div></pre></td></tr></table></figure></p>
+<p>单纯使用构造函数的方式来创建对象，有一个问题，那就是无法共享属性和方法，当两个对象都有一个同名的相同的方法时，方法会在每个实例上重新创建，这无疑是一种浪费。</p>
+<p>创建函数时，函数都会有一个原型（prototype）属性，该属性是一个指针，指向一个对象。而这个对象的用途就是包含那些共享的属性和方法。prototype 就是通过调用构造函数而创建的对象实例的原型对象。</p>
+<p>使用构造函数模式和原型模式来创建对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function Person(name) &#123;</div><div class="line">  this.name = name;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Person.prototype.sayName = function () &#123;</div><div class="line">  console.log(this.name);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var p1 = new Person(&quot;ahonn&quot;);</div><div class="line">var p2 = new Person(&quot;person&quot;);</div><div class="line"></div><div class="line">p1.sayName(); // &quot;ahonn&quot;</div><div class="line">p2.sayName(); // &quot;person&quot;</div></pre></td></tr></table></figure></p>
+<p>构造函数模式用于定义实例的属性，而原型模式用于定义方法和共享的属性。这里有一点继承的味道，如果把 prototype 当作是父类的话，那么构造函数创建的对象就是原型对象的子类。</p>
+<h2 id="继承与原型链"><a href="#继承与原型链" class="headerlink" title="继承与原型链"></a>继承与原型链</h2><p>每个构造函数都有一个原型对象（创建函数时会有一个原型属性），原型对象中包含一个指向构造函数的指针（constructor 指向构造函数）,而实例对象中包含一个指向原型对象的内部指针（实例对象中的 [[Prototype]], 它不能被显式的访问）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function Animal(name) &#123;</div><div class="line">        this.name = name;</div><div class="line">&#125;</div><div class="line">Animal.prototype.age = 3;</div><div class="line">Animal.prototype.sayName = function() &#123;</div><div class="line">    return this.name;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var animal = new Animal(&apos;Dog&apos;);</div><div class="line">console.log(animal.sayName());  // &quot;Dog&quot;</div></pre></td></tr></table></figure>
+<p>以上代码中，构造函数为 Animal ，Animal.prototype 是指向 Animal 的原型对象的指针，而原型对象中 Animal.prototype.constructor 属性指向构造函数，而 Animal 的实例中 [[Prototype]] 指向构造函数原型对象。</p>
+<blockquote>
+<p>在ECMA-262中定义此指针为[[Prototype]]，并不能被显式的访问到，而在Firefox,Safari和Chrome中每个对象上有一个<strong>proto</strong>属性。</p>
+</blockquote>
+<p>那么如果这里面的原型对象是另一个实例对象的话，就可以使得实例与实例之间产生了关联，并且由于原型对象是另一个实例对象的关系，此时这个作为原型对象的实例对象的属性和方法变成了原型对象对应的构造函数创建的实例的“父类”。</p>
+<p>这样层层递进，构成实例和原型间的链条，就让实例之间产生了关联，那么就实现了继承。这个就是原型链的基本概念。</p>
+<p>实现原型继承的简单示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">function Animal() &#123;</div><div class="line">  this.name = &quot;Animal&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Animal.prototype.eat = function () &#123;</div><div class="line">  console.log(&quot;Animal can eating&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function Dog() &#123;</div><div class="line">  this.name = &quot;Dog&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 通过原型继承，继承 Animal 的属性和方法，创建了 Dog 与 Animal 之间的原型链</div><div class="line">Dog.prototype = new Animal();</div><div class="line"></div><div class="line">// 修复 Dog 对象的原型对象中的 constructor</div><div class="line">Dog.prototype.constructor = Dog;</div><div class="line"></div><div class="line">var dog = new Dog();</div><div class="line"></div><div class="line">// Dog 中重写了原型中的 name 属性，即所继承的 Animal 中的 name 属性</div><div class="line">console.log(dog.name); // &quot;Dog&quot;;</div><div class="line"></div><div class="line">// 同时继承了原型中的方法</div><div class="line">dog.eat(); // &quot;Animal can eating&quot;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 JavaScript 中一切皆为对象（Object），但是却与 Java，C++ 等语言不同，没有“类”的概念，也没有所谓的“子类”和“父类”。JavaScript 中的对象是基于原型（prototype）来实现面向对象的，靠奇怪的原型链（prototype chain）来实现继承。&lt;/p&gt;
+&lt;h2 id=&quot;对象与原型&quot;&gt;&lt;a href=&quot;#对象与原型&quot; class=&quot;headerlink&quot; title=&quot;对象与原型&quot;&gt;&lt;/a&gt;对象与原型&lt;/h2&gt;&lt;p&gt;在 JavaScript 中创建对象使用 &lt;code&gt;new&lt;/code&gt; 关键字，而后跟着的是构造函数。在 JavaScript 中没有类的概念，所以对象的构造函数就是单纯只是个函数（function）。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>apply, call 与 bind 的区别</title>
+    <link href="http://yoursite.com/2016/03/20/javascript-apply-call-and-bind/"/>
+    <id>http://yoursite.com/2016/03/20/javascript-apply-call-and-bind/</id>
+    <published>2016-03-20T15:02:08.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在看 《JavaScript 高级程序设计》，也就是所谓的高程3。正好看到 <code>Function</code> 部分，看到了几个熟悉的字眼，<code>apply()</code>，<code>call()</code> 和 <code>bind()</code>。好像是有些面试题里面有，遂搞清楚了记录下。</p>
+<h2 id="apply-与-call"><a href="#apply-与-call" class="headerlink" title="apply() 与 call()"></a>apply() 与 call()</h2><p>每个函数都包含两个非继承的方法：<code>apply()</code> 和 <code>call()</code>。两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内 <code>this</code> 对象的值。这是书中的说法，大概意思就是 <code>apply()</code> 和 <code>call()</code> 这两个方法是用来改变函数中 <code>this</code> 的指向的。而 <code>apply()</code> 与 <code>call()</code> 的区别就在与接收参数的方式。</p>
+<p><code>apply()</code> 方法接收两个参数，一个是在其中运行函数的作用域，函数中的 <code>this</code> 的值，另一个是参数数组。<br>而 <code>call()</code> 方法的第一个参数跟 <code>apply()</code> 相同，不同的是除了第一个参数，后面的其他参数将会直接传递给函数。</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function sum(num1, num2) &#123;</div><div class="line">  return num1 + num2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 使用 apply()</div><div class="line">function applySum(num1, num2) &#123;</div><div class="line">  return sum.apply(this, arguments);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 使用 call()</div><div class="line">function callSum(num1, num2) &#123;</div><div class="line">  return sum.call(this, num1, num2);</div><div class="line">&#125;</div><div class="line"></div><div class="line">alert(applySum(1, 2)); // 3</div><div class="line">alert(callSum(1, 2)); // 3</div></pre></td></tr></table></figure>
+<p>这里使用 <code>apply()</code> 与 <code>call()</code> 的效果都是一样的，不同的只是除了 <code>this</code> 的指向之外的参数的传递形式不同。在不给函数传递参数的时候则完全一样，当不知道需要传递的函数参数的个数时，使用 <code>apply()</code> 更好。</p>
+<p>实际上 <code>apply()</code> 与 <code>call()</code> 的用法并不只是这些。他们可以扩充函数赖以运行的作用域，即可以改变函数运行时的上下文。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">name = &quot;unknown&quot;;</div><div class="line">var person = &#123;</div><div class="line">  name = &quot;ahonn&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function sayName() &#123;</div><div class="line">  console.log(this.name);</div><div class="line">&#125;</div><div class="line"></div><div class="line">sayName() // unknown</div><div class="line">// 函数中的 this 为全局环境</div><div class="line">sayName.apply(this); // unknown</div><div class="line">// 函数中的 this 指向了 person</div><div class="line">sayName.apply(person) // ahonn</div></pre></td></tr></table></figure>
+<p>上面的例子中的 <code>apply()</code> 换成 <code>call()</code> 的话效果相同，因为我这样只给 <code>apply()</code> 传了第一个参数。</p>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p><code>bind()</code> 方法与 <code>apply()</code> 和 <code>call()</code> 相似，同样是可以改变函数内 this 的指向。但与 <code>apply()</code>, <code>call()</code> 不同的是，<code>bind()</code> 方法会创建一个新函数，称为绑定函数，当调用绑定函数时，函数会以创建时的第一个参数 this 作为函数运行的作用域。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">name = &quot;unknown&quot;;</div><div class="line">var person = &#123;</div><div class="line">  name = &quot;ahonn&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function sayName() &#123;</div><div class="line">  console.log(this.name);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var sayAhonnName = sayName.bind(person);</div><div class="line"></div><div class="line">// 函数中的 this 指向 person</div><div class="line">sayAhonnName() // ahonn</div></pre></td></tr></table></figure>
+<p>也就是说，<code>bind()</code> 方法可以绑定一个上下文到函数中，产生一个新的绑定函数。这样就可以在需要的时候去运行有指定 this 对象的函数。</p>
+<p>使用变量保存 this 的做法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var foo = &#123;</div><div class="line">  bar: 1,</div><div class="line">  eventBind: function() &#123;</div><div class="line">    var _this = this;</div><div class="line">    $(&apos;.someClass&apos;).on(&apos;click&apos;, function(event) &#123;</div><div class="line">      console.log(_this.bar);</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>因为在 JavaScript 中函数也是对象，使用如果不使用 <code>_this</code> 来保存上下文环境的话，在绑定的事件函数中将找不到 <code>bar</code> 这个值，因为上下文环境发生了改变。更优雅的做法就是使用 <code>bind()</code> 来完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var foo = &#123;</div><div class="line">    bar : 1,</div><div class="line">    eventBind: function()&#123;</div><div class="line">        $(&apos;.someClass&apos;).on(&apos;click&apos;,function(event) &#123;</div><div class="line">            console.log(this.bar);</div><div class="line">        &#125;.bind(this));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样就把 <code>$(&#39;.someClass&#39;).on(&#39;click&#39;,function(event) {}</code> 外的上下文环境给绑定到了函数内了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在看 《JavaScript 高级程序设计》，也就是所谓的高程3。正好看到 &lt;code&gt;Function&lt;/code&gt; 部分，看到了几个熟悉的字眼，&lt;code&gt;apply()&lt;/code&gt;，&lt;code&gt;call()&lt;/code&gt; 和 &lt;code&gt;bind()&lt;/code&gt;。好像是有些面试题里面有，遂搞清楚了记录下。&lt;/p&gt;
+&lt;h2 id=&quot;apply-与-call&quot;&gt;&lt;a href=&quot;#apply-与-call&quot; class=&quot;headerlink&quot; title=&quot;apply() 与 call()&quot;&gt;&lt;/a&gt;apply() 与 call()&lt;/h2&gt;&lt;p&gt;每个函数都包含两个非继承的方法：&lt;code&gt;apply()&lt;/code&gt; 和 &lt;code&gt;call()&lt;/code&gt;。两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内 &lt;code&gt;this&lt;/code&gt; 对象的值。这是书中的说法，大概意思就是 &lt;code&gt;apply()&lt;/code&gt; 和 &lt;code&gt;call()&lt;/code&gt; 这两个方法是用来改变函数中 &lt;code&gt;this&lt;/code&gt; 的指向的。而 &lt;code&gt;apply()&lt;/code&gt; 与 &lt;code&gt;call()&lt;/code&gt; 的区别就在与接收参数的方式。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;apply()&lt;/code&gt; 方法接收两个参数，一个是在其中运行函数的作用域，函数中的 &lt;code&gt;this&lt;/code&gt; 的值，另一个是参数数组。&lt;br&gt;而 &lt;code&gt;call()&lt;/code&gt; 方法的第一个参数跟 &lt;code&gt;apply()&lt;/code&gt; 相同，不同的是除了第一个参数，后面的其他参数将会直接传递给函数。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jade 模板引擎</title>
+    <link href="http://yoursite.com/2016/02/29/jade-template-engine/"/>
+    <id>http://yoursite.com/2016/02/29/jade-template-engine/</id>
+    <published>2016-02-29T01:47:15.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在改一个 Hexo 的主题 <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank" rel="external">apollo</a>。然后看到这个主题用的是叫做 Jade 的模版引擎写的。之前了解过几个模版引擎 ejs，swig 什么的，但是这些都是在原有的 HTML 中插标签，看起来有点乱。看到 Jade 后就深深的被它那如同 Python 的缩进语法深深吸引了，遂上网学习一发。  </p>
+<p>Jade 是 JavaScript 实现的，供 Node 使用，原生支持 Express。但也有 PHP，Python 等其他语言的实现。（要是 HTML 模版用 Jade，CSS 用 Styl，后端用 Python，那岂不是很好玩~全是缩进缩进缩进=。=）</p>
+<h3 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h3><p>添加文档类型可以通过 <code>!!!</code>  或者 <code>doctype</code> 来添加。</p>
+<a id="more"></a>
+<h3 id="标签、属性"><a href="#标签、属性" class="headerlink" title="标签、属性"></a>标签、属性</h3><p> Jade 写起来就跟在 Sublime Text 中用 Emmet 写 HTML 一样。标签直接写，Class 用 <code>.</code>，ID 用 <code>#</code>。不同的是，层级关系 Jade 使用缩进表示，类似于 Python，而 Emmet 插件的写法是只有一行的。结果写出来就是这个样子滴：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">doctype html</div><div class="line">html</div><div class="line">	head.class</div><div class="line">    	title</div><div class="line">    body#id</div></pre></td></tr></table></figure>
+<p>渲染出来的结果:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span> <span class="attr">class</span>=<span class="string">"class"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span> <span class="attr">id</span>=<span class="string">"id"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>看起来超级简洁，而且都不需要去写闭合标签。不过比较需要注意缩进，坏处就是如果复制代码过来的话可能需要重新人脑格式化一下。</p>
+<p>那么问题来了，其他属性怎么办？不是 Class 和 id 的话，就可以在 标签后面加个括号，写在括号里面。当属性值 <code>undefined</code> 或者 <code>null</code> 时，该属性将不会编译。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a(href=&quot;http://www.ahonn.me&quot;, class=null)</div></pre></td></tr></table></figure>
+<p>渲染为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.ahonn.me&gt;&lt;/a&gt;</span></span></div></pre></td></tr></table></figure>
+<p>这样就解决了其他属性的问题了~</p>
+<h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><p>那么标签里的文本怎么写呢，so easy~ 只要跟在标签的后面就行了。Like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a(href=&quot;http://www.ahonn.me&quot;) Ahonn</div></pre></td></tr></table></figure>
+<p>渲染为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.ahonn.me&gt;Ahonn&lt;/a&gt;</span></span></div></pre></td></tr></table></figure>
+<p>大段文本的话可以使用<code>|</code> 或者<code>.</code>：</p>
+<p>使用 <code>|</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">p</div><div class="line">  | one</div><div class="line">  | two</div><div class="line">  | there</div></pre></td></tr></table></figure>
+<p>使用<code>.</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">p.</div><div class="line">  one</div><div class="line">  two</div><div class="line">  there</div></pre></td></tr></table></figure>
+<p>上面两种写法渲染后是不一样的，使用 <code>|</code> 的写法渲染后不会换行，而使用 <code>.</code> 会根据格式原样输出。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 使用 | --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>one two there<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 使用 . --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>one</div><div class="line">two</div><div class="line">there</div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在使用 <code>script</code>、<code>style</code>、<code>textarea</code> 等只包含文本标签时，可以不加前缀 <code>|</code>，</p>
+<p>当需要在模版中写 JavaScript 时，推荐使用 <code>.</code>。</p>
+<p>既然是 HTML 模版，那么一定是可以结合数据的。这时候，我们可以用 <code>#{}</code> 将变量包起来。这样的话 <code>#{}</code>  中的值将会被转义成对应的数据。</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- var name = &quot;ahonn&quot;</div><div class="line">p.</div><div class="line"> My name is #&#123;name&#125;</div></pre></td></tr></table></figure>
+<p>渲染为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>My name is ahonn<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>jade 支持 HTML 的注释，即在 html 代码中能看到的注释，还有一种是 Jade 的注释，不会被渲染。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// HTML 注释</div><div class="line">p foo</div><div class="line">//- Jade 注释，这个注释只有在 .jade 文件中显示</div><div class="line">p bar</div></pre></td></tr></table></figure>
+<p>渲染为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- HTML 注释 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>在 Jade 中可以定义变量，写条件语句或者循环什么的，这时候就需要使用到 <code>-</code> 前缀，这不会被输出。 <code>-</code> 支持 JavaScript 的语法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- var foo = &apos;bar&apos;;</div><div class="line">- if (foo === &apos;bar&apos;)</div><div class="line">- for (var key in obj)</div><div class="line">  p= obj[key]</div></pre></td></tr></table></figure>
+<p>上面写的条件和循环语句是 JavaScript 中的写法，同时 Jade 也有自己的条件和循环语句。</p>
+<p><strong>循环</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- var items = [&quot;one&quot;, &quot;two&quot;, &quot;there&quot;]</div><div class="line">each item, i in items</div><div class="line">  li #&#123;item&#125;: #&#123;i&#125;</div></pre></td></tr></table></figure>
+<p>渲染为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>one: 0<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>two: 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>three: 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong>条件</strong>：</p>
+<p>条件语句类似 Python，不需要加 <code>()</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for user in users</div><div class="line">  if user.role == &apos;admin&apos;</div><div class="line">    p #&#123;user.name&#125; is an admin</div><div class="line">  else</div><div class="line">    p= user.name</div></pre></td></tr></table></figure>
+<p>Jade 支持转义和非转义输出，使用 <code>=</code> 时将会转义，而 <code>!=</code> 将会原样输出。</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- var  ahonn = &apos;nnoha&apos;</div><div class="line">p= ahonn</div><div class="line">p!= ahonn</div></pre></td></tr></table></figure>
+<p>渲染为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>nnoha<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>ahonn<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="继承、包含"><a href="#继承、包含" class="headerlink" title="继承、包含"></a>继承、包含</h3><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>Jade 支持通过 <code>block</code> 和 <code>extends</code> 关键字老实现模版继承，<code>block</code> 部分将在子模块实现。</p>
+<p>举个栗子🌰：</p>
+<p>layout.jade</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">!!!</div><div class="line">html</div><div class="line">  head</div><div class="line">  	block title</div><div class="line">  body</div><div class="line">  	block content</div></pre></td></tr></table></figure>
+<p>index.jade</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">extends layout</div><div class="line"></div><div class="line">block title</div><div class="line">  title= ahonn</div><div class="line"></div><div class="line">block content</div><div class="line">  p.</div><div class="line">    My name is ahonn.</div><div class="line">    This is index.jade</div></pre></td></tr></table></figure>
+<p>index.jade 继承 layout.jade，layout 中的 block 部分将在子模版 index 中实现。</p>
+<p>index.jade 渲染为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">DOCTYPE</span> <span class="attr">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>ahonn<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  	<span class="tag">&lt;<span class="name">p</span>&gt;</span>My name is ahonn.</div><div class="line">    This is index.jade</div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="包含"><a href="#包含" class="headerlink" title="包含"></a>包含</h4><p>Jade 可以使用 <code>include</code> 静态包含其他文件</p>
+<p>head.jade</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">head</div><div class="line">  title!= ahonn</div></pre></td></tr></table></figure>
+<p>body.jade</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">body</div><div class="line">  p.</div><div class="line">    My name is ahonn.</div><div class="line">    This is index.jade</div></pre></td></tr></table></figure>
+<p>index.jade</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">html</div><div class="line">  include head</div><div class="line">  include body</div></pre></td></tr></table></figure>
+<p>渲染结果将于上面继承的相同。</p>
+<h3 id="Mixins"><a href="#Mixins" class="headerlink" title="Mixins"></a>Mixins</h3><p>Mixins 相当于 JavaScript 中的函数，实际上 Mixins 在编译过程中就是被转换为 JavaScript 函数的。</p>
+<p>不带参数的 🌰：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mixin list</div><div class="line">  ul</div><div class="line">	li foo</div><div class="line">    li bar</div><div class="line"></div><div class="line">h2!= Ahonn</div><div class="line">+list()</div></pre></td></tr></table></figure>
+<p>渲染为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Ahonn<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>foo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>带参数的 🌰：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mixin list(items)</div><div class="line">  ul</div><div class="line">    - each item in items</div><div class="line">      li= item</div><div class="line"></div><div class="line">- var items = [&quot;foo&quot;, &quot;bar&quot;]</div><div class="line">h2!= Ahonn</div><div class="line">+list(items)</div></pre></td></tr></table></figure>
+<p>渲染结果与上面无参数的 Mixins 相同。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>使用 Jade 写模版非常的简洁，各种 <code>include</code> 和 <code>extends</code> 使用起来也非常方便，可以模块化的去写各个组件。优点显而易见，对于我这种写 Python 的来说简直是大爱。不过可能这种写法相对于其他模版引擎来说差别较大，跟 HTML 代码的差别也挺大，所以相对来说也是比较少人去用了。而且用这个写的话，写的人来维护的倒是挺方便简洁，但是如果是其他人来维护的话还是比较难上手的，有点增加维护成本的感觉。不过我个人倒是挺喜欢的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在改一个 Hexo 的主题 &lt;a href=&quot;https://github.com/pinggod/hexo-theme-apollo&quot;&gt;apollo&lt;/a&gt;。然后看到这个主题用的是叫做 Jade 的模版引擎写的。之前了解过几个模版引擎 ejs，swig 什么的，但是这些都是在原有的 HTML 中插标签，看起来有点乱。看到 Jade 后就深深的被它那如同 Python 的缩进语法深深吸引了，遂上网学习一发。  &lt;/p&gt;
+&lt;p&gt;Jade 是 JavaScript 实现的，供 Node 使用，原生支持 Express。但也有 PHP，Python 等其他语言的实现。（要是 HTML 模版用 Jade，CSS 用 Styl，后端用 Python，那岂不是很好玩~全是缩进缩进缩进=。=）&lt;/p&gt;
+&lt;h3 id=&quot;DOCTYPE&quot;&gt;&lt;a href=&quot;#DOCTYPE&quot; class=&quot;headerlink&quot; title=&quot;DOCTYPE&quot;&gt;&lt;/a&gt;DOCTYPE&lt;/h3&gt;&lt;p&gt;添加文档类型可以通过 &lt;code&gt;!!!&lt;/code&gt;  或者 &lt;code&gt;doctype&lt;/code&gt; 来添加。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Jade" scheme="http://yoursite.com/tags/Jade/"/>
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 多线程初步了解</title>
+    <link href="http://yoursite.com/2016/02/20/python-multithreaded-preliminary/"/>
+    <id>http://yoursite.com/2016/02/20/python-multithreaded-preliminary/</id>
+    <published>2016-02-20T12:56:39.000Z</published>
+    <updated>2016-09-20T16:37:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这两天在写 <a href="https://www.github.com/ahonn/Nada" target="_blank" rel="external">Nada</a> 的下载功能，遇到一个问题，在下载歌曲的时候整个界面都会卡住，必须等待下载完成才能够恢复，因为写的时候是直接顺序执行的，没有多线程。之前在写播放功能的时候是参考了别人的代码，自己其实对多线程部分不是很了解。然后趁着晚上了解一下 Python 的 thread 和 treading 模块。</p>
+<h2 id="Python-多线程支持"><a href="#Python-多线程支持" class="headerlink" title="Python 多线程支持"></a>Python 多线程支持</h2><p>Pyhton 标准库提供了 thread 和 threading 模块来支持多线程，这意味着不需要重新下载这两个模块，只需要在代码中 import 这两个模块就可以了。</p>
+<h2 id="thread-模块"><a href="#thread-模块" class="headerlink" title="thread 模块"></a>thread 模块</h2><p>thread 模块是以低级、原始的方式来处理和控制线程，提供了一个简单的锁（相对于 threading 模块的锁的感觉来说的确是比较简单）。相对于 threading 模块来说，thread 模块更加灵活。</p>
+<a id="more"></a>
+<ul>
+<li><p><code>thread.start_new_thread(function, args [, kwargs])</code><br>创建一个新的线程，返回该线程的标识符。线程执行后将制动退出，即函数执行完毕。当遇到未处理的异常时也将退出，但不影响其他线程。</p>
+<ul>
+<li><code>function</code>：线程执行的函数。</li>
+<li><code>args</code>：线程执行函数的参数。</li>
+<li><code>kwargs</code>：为函数提供命名参数字典。</li>
+</ul>
+</li>
+<li><p><code>thread.exit()</code><br>结束当前进程，触发 SystemExit 异常。</p>
+</li>
+<li><p><code>thread.get_ident()</code><br>返回当前线程的标识符，标识符为一个非零整数。</p>
+</li>
+<li><p><code>thread.interrupt_main()</code><br>触发主线程的 KeyboardInterrupt 异常，子线程使用此方法来终端主线程。</p>
+</li>
+<li><p><code>thread.allocate_lock()</code><br>创建 thread.LockType 锁类型，即为线程锁</p>
+</li>
+</ul>
+<h3 id="thread-LockType"><a href="#thread-LockType" class="headerlink" title="thread.LockType"></a>thread.LockType</h3><ul>
+<li><p><code>Lock.acquire([ waitflag ])</code><br>获取锁，返回一个布尔值，成功返回 True，否则返回 False。</p>
+<p><code>waitflag</code>：默认值为非零整数，表示如果锁已经被其他线程占用，那么当前线程等待，直到其他线程释放锁，即为同步阻塞。如果将参数设置为 0，即表示当前线程会尝试获取锁，不管锁是否被占用，线程都不会等待。</p>
+</li>
+<li><p><code>Lock.release()</code><br>释放所占用的锁。</p>
+</li>
+<li><p><code>Lock.locked()</code><br>判断锁是否被占用。</p>
+</li>
+</ul>
+<h2 id="threading-模块"><a href="#threading-模块" class="headerlink" title="threading 模块"></a>threading 模块</h2><p>threading 模块是对 thread 模块的二次封装，提供更方便的 API 使用。大多数多线程使用 threading 模块编写。提供更复杂的锁（Lock &amp; RLock），条件，事件等。</p>
+<ul>
+<li><p><code>threading.Thread(group=None, target=None,name=None, args=(), kwargs={})</code><br>返回一个Thread对象，每个Thread对象代表着一个线程，可以通过start()方法，开始运行。</p>
+<ul>
+<li><code>group</code>：应该为 None ，该参数是留给未来的扩展时使用的</li>
+<li><code>target</code>：可调用对象（函数），在线程启动后执行</li>
+<li><code>name</code>：线程的名字，默认值为“Thread-N”，N 是一个十进制整数</li>
+<li><code>args</code>：target 调用对象的参数列表</li>
+<li><code>kwargs</code>：target 调用对象的关键字参数</li>
+</ul>
+</li>
+<li><p><code>threading.activeCount()</code><br>返回当前存活线程数</p>
+</li>
+<li><p><code>threading.currentThread()</code><br>返回当前 Thread 对象</p>
+</li>
+<li><p><code>threading.enumerate()</code><br>返回当前存活的 Thread 对象列表</p>
+</li>
+<li><p><code>threading.Lock()</code><br>返回一个原始锁对象</p>
+</li>
+</ul>
+<h3 id="threading-Thread"><a href="#threading-Thread" class="headerlink" title="threading.Thread"></a>threading.Thread</h3><p>有两种方式来创建 threading.Thread 对象。一种方式是继承 Thread 类，重写父类的 run 方法，另一种方式是通过 threading.Thread() 函数创建。</p>
+<ul>
+<li><p><code>Thread.start()</code><br>启动线程</p>
+</li>
+<li><p><code>Thread.join([timeout])</code><br>阻塞当前环境进程，直到调用此方法的线程终止，或者达到指定的 timeout</p>
+</li>
+<li><p><code>Thread.getName()</code> &amp; <code>Thread.setName()</code><br>获取线程名称 &amp; 设置线程名称</p>
+</li>
+<li><p><code>Thread.isAlive()</code><br>返回线程是否存活。返回 True 在线程开始运行直到终止。</p>
+</li>
+</ul>
+<h3 id="threading-Lock"><a href="#threading-Lock" class="headerlink" title="threading.Lock"></a>threading.Lock</h3><ul>
+<li><p><code>Lock.acquire([blocking])</code><br>获取锁。<code>blocking</code> 默认为 true，阻塞直到锁被释放。当 <code>blocking</code> 为 False 时，则不阻塞。</p>
+</li>
+<li><p><code>Lock.release()</code><br>释放锁，没有返回值。当没有锁时，将会抛出 ThreadError 异常。</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这两天在写 &lt;a href=&quot;https://www.github.com/ahonn/Nada&quot;&gt;Nada&lt;/a&gt; 的下载功能，遇到一个问题，在下载歌曲的时候整个界面都会卡住，必须等待下载完成才能够恢复，因为写的时候是直接顺序执行的，没有多线程。之前在写播放功能的时候是参考了别人的代码，自己其实对多线程部分不是很了解。然后趁着晚上了解一下 Python 的 thread 和 treading 模块。&lt;/p&gt;
+&lt;h2 id=&quot;Python-多线程支持&quot;&gt;&lt;a href=&quot;#Python-多线程支持&quot; class=&quot;headerlink&quot; title=&quot;Python 多线程支持&quot;&gt;&lt;/a&gt;Python 多线程支持&lt;/h2&gt;&lt;p&gt;Pyhton 标准库提供了 thread 和 threading 模块来支持多线程，这意味着不需要重新下载这两个模块，只需要在代码中 import 这两个模块就可以了。&lt;/p&gt;
+&lt;h2 id=&quot;thread-模块&quot;&gt;&lt;a href=&quot;#thread-模块&quot; class=&quot;headerlink&quot; title=&quot;thread 模块&quot;&gt;&lt;/a&gt;thread 模块&lt;/h2&gt;&lt;p&gt;thread 模块是以低级、原始的方式来处理和控制线程，提供了一个简单的锁（相对于 threading 模块的锁的感觉来说的确是比较简单）。相对于 threading 模块来说，thread 模块更加灵活。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="thread" scheme="http://yoursite.com/tags/thread/"/>
+    
+      <category term="threading" scheme="http://yoursite.com/tags/threading/"/>
+    
+  </entry>
+  
+</feed>

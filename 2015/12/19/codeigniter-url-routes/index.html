@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Ahonn"><meta name="description" content="设置URL路由规则CodeIgniter中的URL一般遵循之前说的下面这种规则：http://example.com/index.php/controllers/method/arguments但是有些原因会使得我们需要使用不同的规则去让URl映射。当有"><meta name="keywords" content="CodeIgniter,PHP"><title>CodeIgniter URL 路由 · Ahonn</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://yoursite.com/2015/12/19/codeigniter-url-routes/"><link rel="alternate" href="/atom.xml" title="Ahonn"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b54ec1817ee20d83af77a0859c4dda5d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74273646-1', 'auto');
+ga('send', 'pageview');</script></head><body><div id="main"><header><a href="/." class="logo">Ahonn</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">Home</a></li><li class="nav-link"><a href="/archives/" target="_self">Archives</a></li><li class="nav-link"><a href="/tags/" target="_self">Tags</a></li><li class="nav-link"><a href="/about/" target="_self">About</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">CodeIgniter URL 路由</h1><span class="post-time">Dec 19, 2015</span><div id="sidebar" class="post-sidebar"><h3 class="heading">Contents</h3><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置-URL-路由规则"><span class="toc-text">设置 URL 路由规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通配符"><span class="toc-text">通配符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式"><span class="toc-text">正则表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#保留路由"><span class="toc-text">保留路由</span></a></li></ol></div><div class="post-content"><h2 id="设置-URL-路由规则"><a href="#设置-URL-路由规则" class="headerlink" title="设置 URL 路由规则"></a>设置 URL 路由规则</h2><p>CodeIgniter 中的 URL 一般遵循之前说的下面这种规则：<br>    <a href="http://example.com/index.php/controllers/method/arguments" target="_blank" rel="external">http://example.com/index.php/controllers/method/arguments</a></p>
+<p>但是有些原因会使得我们需要使用不同的规则去让 URl 映射。</p>
+<p>当有这种需求的时候，可以在 <code>application/config/router.php</code> 的 <code>$route</code> 数组中设置需要的路由规则，在路由规则中可以使用通配符或正则表达式。</p>
+<h2 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h2><p>使用通配符的路由规则：<br>    $route[‘name/:num’] = ‘foo/bar’;<br><a id="more"></a></p>
+<p>在路由规则数组 <code>$route</code> 中，数组的 key 表示要匹配的 URL ，数组的 value 表示重定向的位置。</p>
+<p>可以使用纯字符串去匹配，或者是使用下列两种通配符：</p>
+<ul>
+<li>(:num)    匹配数字：对应正则表达式中的 [0-9]+ ，即匹配1到多个数字</li>
+<li>(:any)    匹配任意字符：对于正则表达式中 [^/]+ ，即匹配1到多个除<code>/</code>外的字符</li>
+</ul>
+<p>在 <code>$route</code> 数组中，前面的规则优先于后面的规则，就是说它是按照数组顺序匹配的，当匹配到规则时就不会继续匹配后面的规则了。</p>
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>使用正则表达式的路由规则：<br>    $route[‘name/([a-z]+)/(\d+)’] = ‘$1/$2’;</p>
+<p>当访问类似 <code>name/foo/233</code> 这样的 URL 的时候会被重定向到 <code>foo/233</code>。$1、$2 表示被匹配到的第几个字符串。</p>
+<h2 id="保留路由"><a href="#保留路由" class="headerlink" title="保留路由"></a>保留路由</h2><p><code>$route[&#39;default_controller&#39;] = &#39;welcome&#39;;</code> ：默认的控制器。</p>
+<p><code>$route[&#39;404_override&#39;] = &#39;&#39;;</code> ：当页面不存在时访问的控制器。</p>
+<p><code>$route[&#39;translate_uri_dashes&#39;] = FALSE;</code> ：这是一个路由设置，不是规则，表示是否把 URL 中的 <code>-</code> 替换为 <code>_</code>。</p>
+</div></article><div class="tags"><a href="/tags/CodeIgniter/">CodeIgniter</a><a href="/tags/PHP/">PHP</a></div><div class="paginator"><a href="/2015/12/19/simple-use-of-the-php-curl-library/" class="prev"><i class="iconfont icon-left"></i><span> Prev</span></a><a href="/2015/12/13/codeigniter-simple-example-with-mvc/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://yoursite.com/2015/12/19/codeigniter-url-routes/';
+    this.page.identifier = '2015/12/19/codeigniter-url-routes/';
+    this.page.title = 'CodeIgniter URL 路由';
+};
+(function() {
+var d = document, s = d.createElement('script');
+
+s.src = '//ahonn.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script></section><footer><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2016<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">Ahonn</span></p></div><label id="back2top"><i class="iconfont icon-up"></i></label></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Ahonn"><meta name="description" content="记录以避免再次犯错前因今天修改.bashrc中的环境配置时，不小心把$PATH删除了。后来发现后添加回去后Terminal中出现如下错误：sudo:/etc/sudoersisworldwritablesudo:novalidsudoerssources"><meta name="keywords" content="Ubuntu"><title>sudoers is world writable · Ahonn</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://yoursite.com/2015/08/30/sudoers-is-world-writable/"><link rel="alternate" href="/atom.xml" title="Ahonn"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b54ec1817ee20d83af77a0859c4dda5d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74273646-1', 'auto');
+ga('send', 'pageview');</script></head><body><div id="main"><header><a href="/." class="logo">Ahonn</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">Home</a></li><li class="nav-link"><a href="/archives/" target="_self">Archives</a></li><li class="nav-link"><a href="/tags/" target="_self">Tags</a></li><li class="nav-link"><a href="/about/" target="_self">About</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">sudoers is world writable</h1><span class="post-time">Aug 30, 2015</span><div id="sidebar" class="post-sidebar"><h3 class="heading">Contents</h3><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前因"><span class="toc-text">前因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后果"><span class="toc-text">后果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#具体步骤："><span class="toc-text">具体步骤：</span></a></li></ol></li></ol></li></ol></div><div class="post-content"><blockquote>
+<p>记录以避免再次犯错</p>
+</blockquote>
+<h2 id="前因"><a href="#前因" class="headerlink" title="前因"></a>前因</h2><p>今天修改.bashrc中的环境配置时，不小心把$PATH删除了。后来发现后添加回去后Terminal中出现如下错误：</p>
+<pre><code>sudo: /etc/sudoers is world writable
+sudo: no valid sudoers sources found, quitting
+</code></pre><a id="more"></a>
+<p>这是因为sudoers的权限不对而出现的问题。</p>
+<h2 id="后果"><a href="#后果" class="headerlink" title="后果"></a>后果</h2><p>在网上搜索后知道了解决方法是进入ubuntu的recovery mode将<code>/etc/soduers</code>的权限改为0440.</p>
+<p>然而这需要在recovery下使用root帐号，由于我没有设置root密码所以无法解决。</p>
+<p>最后终于找到了解决的办法，为了防止下次再次如此麻烦，将其记录下来。</p>
+<h4 id="具体步骤："><a href="#具体步骤：" class="headerlink" title="具体步骤："></a>具体步骤：</h4><ul>
+<li>开机按<code>Esc</code>进入GRUB，选择第二项</li>
+<li>选择recovery mode（一般是第二项），按<code>e</code>进入编辑</li>
+<li>将其中的<code>ro recovery nomodeset</code> 改为 <code>rw single init=/bin/bash</code></li>
+<li>按F10，进入单用户模式，即root用户</li>
+<li>输入 <code>chomd 0440 /etc/sudoers</code> 修改权限</li>
+<li>按Ctrl + Alt + Del 重启</li>
+</ul>
+<p>重启后就可以使用sudo。这里出现了一个提示，进入/etc目录删除sudoers.d文件夹即可解决。</p>
+</div></article><div class="tags"><a href="/tags/Ubuntu/">Ubuntu</a></div><div class="paginator"><a href="/2015/10/29/php-captcha-identification-I/" class="prev"><i class="iconfont icon-left"></i><span> Prev</span></a><a href="/2015/08/24/ubuntu-lamp-environment-set-up/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://yoursite.com/2015/08/30/sudoers-is-world-writable/';
+    this.page.identifier = '2015/08/30/sudoers-is-world-writable/';
+    this.page.title = 'sudoers is world writable';
+};
+(function() {
+var d = document, s = d.createElement('script');
+
+s.src = '//ahonn.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script></section><footer><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2016<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">Ahonn</span></p></div><label id="back2top"><i class="iconfont icon-up"></i></label></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>
