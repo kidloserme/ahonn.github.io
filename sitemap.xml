@@ -9,7 +9,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2015/12/31/2015-summary/</loc>
+    <loc>http://yoursite.com/2015/12/11/an-overview-of-the-codeigniter/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -121,7 +121,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2015/12/11/an-overview-of-the-codeigniter/</loc>
+    <loc>http://yoursite.com/2015/12/31/2015-summary/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -129,20 +129,6 @@
   
   <url>
     <loc>http://yoursite.com/2015/11/22/phpmyadmin-lack-mcrypt-extension/</loc>
-    
-    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/01/23/python-curses-module/</loc>
-    
-    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/02/20/python-multithreaded-preliminary/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -163,7 +149,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/05/03/starting-from-the-optimizeCb/</loc>
+    <loc>http://yoursite.com/2016/02/20/python-multithreaded-preliminary/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -171,6 +157,13 @@
   
   <url>
     <loc>http://yoursite.com/2015/08/30/sudoers-is-world-writable/</loc>
+    
+    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/05/03/starting-from-the-optimizeCb/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -191,14 +184,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/05/14/the-first-interview/</loc>
+    <loc>http://yoursite.com/2016/07/25/the-right-way-to-array-of-random-sequence/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/07/25/the-right-way-to-array-of-random-sequence/</loc>
+    <loc>http://yoursite.com/2016/05/14/the-first-interview/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -219,6 +212,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/2016/06/29/vertical-center-for-css/</loc>
+    
+    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/05/28/using-nokogiri-parsing-html/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
@@ -226,7 +226,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/06/29/vertical-center-for-css/</loc>
+    <loc>http://yoursite.com/2016/01/23/python-curses-module/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
