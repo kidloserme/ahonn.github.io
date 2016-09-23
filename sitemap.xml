@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2015/11/22/phpmyadmin-lack-mcrypt-extension/</loc>
+    <loc>http://yoursite.com/2015/11/12/php-captcha-identification-II/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -23,6 +23,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/2015/12/13/codeigniter-simple-example-with-mvc/</loc>
+    
+    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2015/12/19/codeigniter-url-routes/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
@@ -37,7 +44,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2015/12/13/codeigniter-simple-example-with-mvc/</loc>
+    <loc>http://yoursite.com/2016/02/29/jade-template-engine/</loc>
+    
+    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/03/20/javascript-apply-call-and-bind/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -51,21 +65,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/02/29/jade-template-engine/</loc>
-    
-    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2016/08/31/javascript-best-practices/</loc>
-    
-    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/03/20/javascript-apply-call-and-bind/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -93,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/08/02/javascript-reduce-the-browser-reflow/</loc>
-    
-    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2016/03/29/javascript-prototype-chain/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
@@ -107,7 +100,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2015/11/12/php-captcha-identification-II/</loc>
+    <loc>http://yoursite.com/2016/08/02/javascript-reduce-the-browser-reflow/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -121,6 +114,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/2015/10/29/php-captcha-identification-I/</loc>
+    
+    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2015/12/11/an-overview-of-the-codeigniter/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
@@ -128,14 +128,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/06/07/sass-preliminary-study/</loc>
-    
-    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2015/10/29/php-captcha-identification-I/</loc>
+    <loc>http://yoursite.com/2015/11/22/phpmyadmin-lack-mcrypt-extension/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -156,7 +149,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2015/08/30/sudoers-is-world-writable/</loc>
+    <loc>http://yoursite.com/2016/06/07/sass-preliminary-study/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -171,6 +164,27 @@
   
   <url>
     <loc>http://yoursite.com/2016/05/03/starting-from-the-optimizeCb/</loc>
+    
+    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/08/30/sudoers-is-world-writable/</loc>
+    
+    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/11/25/the-crawler-of-zhihu-user-dynamic-monitoring/</loc>
+    
+    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/05/14/the-first-interview/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -198,14 +212,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2015/11/25/the-crawler-of-zhihu-user-dynamic-monitoring/</loc>
-    
-    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/05/14/the-first-interview/</loc>
+    <loc>http://yoursite.com/2016/05/14/use-javascript-to-achieve-simple-drag-and-drop/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
@@ -213,13 +220,6 @@
   
   <url>
     <loc>http://yoursite.com/2016/05/28/using-nokogiri-parsing-html/</loc>
-    
-    <lastmod>2016-09-20T16:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/05/14/use-javascript-to-achieve-simple-drag-and-drop/</loc>
     
     <lastmod>2016-09-20T16:37:16.000Z</lastmod>
     
